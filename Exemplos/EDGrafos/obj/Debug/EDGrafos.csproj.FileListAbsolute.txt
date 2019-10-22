@@ -1,0 +1,30 @@
+D:\Chico\0Cotuca\APOSTILAS\EstDad\Exercicios\EDGrafos\obj\Debug\EDGrafos.csprojAssemblyReference.cache
+D:\Chico\0Cotuca\APOSTILAS\EstDad\Exercicios\EDGrafos\obj\Debug\EDGrafos.frmGrafos.resources
+D:\Chico\0Cotuca\APOSTILAS\EstDad\Exercicios\EDGrafos\obj\Debug\EDGrafos.Properties.Resources.resources
+D:\Chico\0Cotuca\APOSTILAS\EstDad\Exercicios\EDGrafos\obj\Debug\EDGrafos.csproj.GenerateResource.cache
+D:\Chico\0Cotuca\APOSTILAS\EstDad\Exercicios\EDGrafos\obj\Debug\EDGrafos.csproj.CoreCompileInputs.cache
+D:\Chico\0Cotuca\APOSTILAS\EstDad\Exercicios\EDGrafos\bin\Debug\EDGrafos.exe.config
+D:\Chico\0Cotuca\APOSTILAS\EstDad\Exercicios\EDGrafos\bin\Debug\EDGrafos.exe
+D:\Chico\0Cotuca\APOSTILAS\EstDad\Exercicios\EDGrafos\bin\Debug\EDGrafos.pdb
+D:\Chico\0Cotuca\APOSTILAS\EstDad\Exercicios\EDGrafos\obj\Debug\EDGrafos.exe
+D:\Chico\0Cotuca\APOSTILAS\EstDad\Exercicios\EDGrafos\obj\Debug\EDGrafos.pdb
+X:\Exemplos\EDGrafos\bin\Debug\EDGrafos.exe.config
+X:\Exemplos\EDGrafos\bin\Debug\EDGrafos.exe
+X:\Exemplos\EDGrafos\bin\Debug\EDGrafos.pdb
+X:\Exemplos\EDGrafos\obj\Debug\EDGrafos.csprojResolveAssemblyReference.cache
+X:\Exemplos\EDGrafos\obj\Debug\EDGrafos.frmGrafos.resources
+X:\Exemplos\EDGrafos\obj\Debug\EDGrafos.Properties.Resources.resources
+X:\Exemplos\EDGrafos\obj\Debug\EDGrafos.csproj.GenerateResource.Cache
+X:\Exemplos\EDGrafos\obj\Debug\EDGrafos.csproj.CoreCompileInputs.cache
+X:\Exemplos\EDGrafos\obj\Debug\EDGrafos.exe
+X:\Exemplos\EDGrafos\obj\Debug\EDGrafos.pdb
+P:\Informatica\Materiais Didaticos\Matutino\4o Semestre\Estrutura de Dados II\Exemplos\EDGrafos\bin\Debug\EDGrafos.exe.config
+P:\Informatica\Materiais Didaticos\Matutino\4o Semestre\Estrutura de Dados II\Exemplos\EDGrafos\bin\Debug\EDGrafos.exe
+P:\Informatica\Materiais Didaticos\Matutino\4o Semestre\Estrutura de Dados II\Exemplos\EDGrafos\bin\Debug\EDGrafos.pdb
+P:\Informatica\Materiais Didaticos\Matutino\4o Semestre\Estrutura de Dados II\Exemplos\EDGrafos\obj\Debug\EDGrafos.csprojAssemblyReference.cache
+P:\Informatica\Materiais Didaticos\Matutino\4o Semestre\Estrutura de Dados II\Exemplos\EDGrafos\obj\Debug\EDGrafos.frmGrafos.resources
+P:\Informatica\Materiais Didaticos\Matutino\4o Semestre\Estrutura de Dados II\Exemplos\EDGrafos\obj\Debug\EDGrafos.Properties.Resources.resources
+P:\Informatica\Materiais Didaticos\Matutino\4o Semestre\Estrutura de Dados II\Exemplos\EDGrafos\obj\Debug\EDGrafos.csproj.GenerateResource.cache
+P:\Informatica\Materiais Didaticos\Matutino\4o Semestre\Estrutura de Dados II\Exemplos\EDGrafos\obj\Debug\EDGrafos.csproj.CoreCompileInputs.cache
+P:\Informatica\Materiais Didaticos\Matutino\4o Semestre\Estrutura de Dados II\Exemplos\EDGrafos\obj\Debug\EDGrafos.exe
+P:\Informatica\Materiais Didaticos\Matutino\4o Semestre\Estrutura de Dados II\Exemplos\EDGrafos\obj\Debug\EDGrafos.pdb

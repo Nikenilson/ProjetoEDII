@@ -1,0 +1,10 @@
+X:\Exemplos\ArvoresAVL\apArvore\obj\Debug\apArvore.csprojResolveAssemblyReference.cache
+X:\Exemplos\ArvoresAVL\apArvore\obj\Debug\apArvore.FrmArvore.resources
+X:\Exemplos\ArvoresAVL\apArvore\obj\Debug\apArvore.Properties.Resources.resources
+X:\Exemplos\ArvoresAVL\apArvore\obj\Debug\apArvore.csproj.GenerateResource.Cache
+X:\Exemplos\ArvoresAVL\apArvore\obj\Debug\apArvore.csproj.CoreCompileInputs.cache
+X:\Exemplos\ArvoresAVL\apArvore\bin\Debug\apArvore.exe.config
+X:\Exemplos\ArvoresAVL\apArvore\bin\Debug\apArvore.exe
+X:\Exemplos\ArvoresAVL\apArvore\bin\Debug\apArvore.pdb
+X:\Exemplos\ArvoresAVL\apArvore\obj\Debug\apArvore.exe
+X:\Exemplos\ArvoresAVL\apArvore\obj\Debug\apArvore.pdb

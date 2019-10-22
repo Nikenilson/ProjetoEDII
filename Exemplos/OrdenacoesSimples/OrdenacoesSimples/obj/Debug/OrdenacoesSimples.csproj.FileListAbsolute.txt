@@ -1,0 +1,10 @@
+X:\Exemplos\OrdenacoesSimples\OrdenacoesSimples\bin\Debug\OrdenacoesSimples.exe.config
+X:\Exemplos\OrdenacoesSimples\OrdenacoesSimples\bin\Debug\OrdenacoesSimples.exe
+X:\Exemplos\OrdenacoesSimples\OrdenacoesSimples\bin\Debug\OrdenacoesSimples.pdb
+X:\Exemplos\OrdenacoesSimples\OrdenacoesSimples\obj\Debug\OrdenacoesSimples.csprojResolveAssemblyReference.cache
+X:\Exemplos\OrdenacoesSimples\OrdenacoesSimples\obj\Debug\OrdenacoesSimples.Form1.resources
+X:\Exemplos\OrdenacoesSimples\OrdenacoesSimples\obj\Debug\OrdenacoesSimples.Properties.Resources.resources
+X:\Exemplos\OrdenacoesSimples\OrdenacoesSimples\obj\Debug\OrdenacoesSimples.csproj.GenerateResource.Cache
+X:\Exemplos\OrdenacoesSimples\OrdenacoesSimples\obj\Debug\OrdenacoesSimples.csproj.CoreCompileInputs.cache
+X:\Exemplos\OrdenacoesSimples\OrdenacoesSimples\obj\Debug\OrdenacoesSimples.exe
+X:\Exemplos\OrdenacoesSimples\OrdenacoesSimples\obj\Debug\OrdenacoesSimples.pdb
