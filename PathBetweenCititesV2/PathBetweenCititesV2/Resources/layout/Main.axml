@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="25px"
+    android:minHeight="25px">
+    <LinearLayout
+        android:layout_margin="20dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout1">
+            <TextView
+                android:text="De"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView1"
+                android:textSize="25dp" />
+            <TextView
+                android:text="Para"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView2"
+                android:textSize="25dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/linearLayout2">
+            <Spinner
+                android:id="@+id/spOrigem"
+                android:layout_width="200dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp" />
+            <Spinner
+                android:id="@+id/spDestino"
+                android:layout_marginLeft="50dp"
+                android:layout_weight="1"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:id="@+id/llImagem"
+            android:layout_margin="20dp"
+            android:orientation="horizontal"
+            android:layout_width="717px"
+            android:layout_height="578px" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Resultados:"
+            android:textSize="25dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp" />
+        <EditText
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:id="@+id/edtResultados"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:gravity="top|left"
+            android:inputType="textMultiLine"
+            android:overScrollMode="always"
+            android:scrollbarStyle="insideInset"
+            android:scrollbars="vertical"
+            android:lines="6"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:scrollHorizontally="false" />
+        <LinearLayout
+            android:layout_margin="20dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/btnAddCidade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+ Cidade"
+                android:textSize="25dp" />
+            <Button
+                android:id="@+id/btnAddCaminho"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+ Caminho"
+                android:textSize="25dp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
