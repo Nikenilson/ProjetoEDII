@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Windows.Forms;
+//using System.Windows.Forms;
 
 public class ListaSimples<Dado> where Dado : IComparable<Dado>
 {
@@ -71,7 +71,7 @@ public class ListaSimples<Dado> where Dado : IComparable<Dado>
         }
     }
 
-    public void Listar(ListBox onde)
+    /*public void Listar(ListBox onde)
     {
         onde.Items.Clear();
 
@@ -85,7 +85,7 @@ public class ListaSimples<Dado> where Dado : IComparable<Dado>
         //    onde.Items.Add(atual.Info);
         //    atual = atual.Prox;
         // }
-    }
+    }*/
 
   public bool ExisteDado(Dado outroProcurado)
   {

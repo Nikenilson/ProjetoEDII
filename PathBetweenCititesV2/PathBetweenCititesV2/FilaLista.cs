@@ -15,19 +15,19 @@ class FilaLista<Dado> : ListaSimples<Dado>, IQueue<Dado>
       base.RemoverNo(null, Primeiro);
       return elemento;
     }
-    throw new FilaVaziaException("Fila vazia");
-  }
+        throw new Exception("FilaVazia");
+    }
   public Dado OInicio() // devolve objeto do início
   {                     // sem retirá-lo da fila
     if (EstaVazia())
-      throw new FilaVaziaException("Fila vazia");
+      throw new Exception("FilaVazia");
     Dado o = base.Primeiro.Info; // acessa o 1o objeto genérico
     return o;
   }
   public Dado OFim() // devolve objeto do fim
   {                  // sem retirá-lo da fila
     if (EstaVazia())
-      throw new FilaVaziaException("Fila vazia");
+      throw new Exception("FilaVazia");
 
     Dado o = base.Ultimo.Info; // acessa o 1o objeto genérico
     return o;
@@ -36,11 +36,11 @@ class FilaLista<Dado> : ListaSimples<Dado>, IQueue<Dado>
   {
     return base.QuantosNos;  // tamanho da lista ligada herdada
   }
-  public bool EstaVazia()
+  public new bool EstaVazia()
   {
     return base.EstaVazia;
   }
-  public Dado[] ToArray()
+  /*public Dado[] ToArray()
   {
     Dado[] itens = new Dado[this.Tamanho()];
     int indice = 0;
@@ -49,5 +49,5 @@ class FilaLista<Dado> : ListaSimples<Dado>, IQueue<Dado>
           itens[indice++] = base.Atual.Info;
 
     return itens;
-  }
+  }*/
 }

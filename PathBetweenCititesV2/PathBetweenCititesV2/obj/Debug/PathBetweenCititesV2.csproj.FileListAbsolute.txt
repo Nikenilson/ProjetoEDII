@@ -37,3 +37,7 @@ obj\Debug\linksrc\System.ComponentModel.Composition.pdb
 C:\Users\u18169\Documents\GitHub\ProjetoEDII\PathBetweenCititesV2\PathBetweenCititesV2\obj\Debug\PathBetweenCititesV2.csprojResolveAssemblyReference.cache
 C:\Users\u18169\Documents\GitHub\ProjetoEDII\PathBetweenCititesV2\PathBetweenCititesV2\obj\Debug\PathBetweenCititesV2.dll
 C:\Users\u18169\Documents\GitHub\ProjetoEDII\PathBetweenCititesV2\PathBetweenCititesV2\obj\Debug\PathBetweenCititesV2.pdb
+C:\Users\u18196\Documents\GitHub\ProjetoEDII\PathBetweenCititesV2\PathBetweenCititesV2\obj\Debug\PathBetweenCititesV2.csprojResolveAssemblyReference.cache
+C:\Users\u18196\Documents\GitHub\ProjetoEDII\PathBetweenCititesV2\PathBetweenCititesV2\obj\Debug\PathBetweenCititesV2.csproj.CoreCompileInputs.cache
+C:\Users\u18196\Documents\GitHub\ProjetoEDII\PathBetweenCititesV2\PathBetweenCititesV2\obj\Debug\PathBetweenCititesV2.dll
+C:\Users\u18196\Documents\GitHub\ProjetoEDII\PathBetweenCititesV2\PathBetweenCititesV2\obj\Debug\PathBetweenCititesV2.pdb
