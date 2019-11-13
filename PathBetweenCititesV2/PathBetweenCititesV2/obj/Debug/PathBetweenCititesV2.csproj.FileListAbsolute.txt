@@ -13,7 +13,6 @@ C:\Users\u18196\Documents\GitHub\ProjetoEDII\ProjetoAndroid\PathBetweenCititesV2
 C:\Users\u18196\Documents\GitHub\ProjetoEDII\ProjetoAndroid\PathBetweenCititesV2\PathBetweenCititesV2\obj\Debug\uploadflags.txt
 C:\Users\u18196\Documents\GitHub\ProjetoEDII\ProjetoAndroid\PathBetweenCititesV2\PathBetweenCititesV2\bin\Debug\PathBetweenCititesV2.dll.mdb
 C:\Users\u18196\Documents\GitHub\ProjetoEDII\ProjetoAndroid\PathBetweenCititesV2\PathBetweenCititesV2\obj\Debug\android\assets\PathBetweenCititesV2.dll.mdb
-C:\Users\u18196\Documents\GitHub\ProjetoEDII\ProjetoAndroid\PathBetweenCititesV2\PathBetweenCititesV2\bin\Debug\PathBetweenCititesV2.dll
 bin\Debug\Mono.Android.pdb
 bin\Debug\mscorlib.pdb
 bin\Debug\System.Core.pdb
@@ -35,3 +34,6 @@ obj\Debug\linksrc\System.Runtime.Serialization.pdb
 obj\Debug\linksrc\System.ServiceModel.Internals.pdb
 obj\Debug\linksrc\Mono.Security.pdb
 obj\Debug\linksrc\System.ComponentModel.Composition.pdb
+C:\Users\u18169\Documents\GitHub\ProjetoEDII\PathBetweenCititesV2\PathBetweenCititesV2\obj\Debug\PathBetweenCititesV2.csprojResolveAssemblyReference.cache
+C:\Users\u18169\Documents\GitHub\ProjetoEDII\PathBetweenCititesV2\PathBetweenCititesV2\obj\Debug\PathBetweenCititesV2.dll
+C:\Users\u18169\Documents\GitHub\ProjetoEDII\PathBetweenCititesV2\PathBetweenCititesV2\obj\Debug\PathBetweenCititesV2.pdb

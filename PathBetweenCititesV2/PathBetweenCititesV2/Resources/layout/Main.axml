@@ -96,7 +96,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="+ Cidade"
-                android:textSize="25dp" />
+                android:textSize="25dp"
+                android:onClick="@string/app_name" />
             <Button
                 android:id="@+id/btnAddCaminho"
                 android:layout_width="wrap_content"

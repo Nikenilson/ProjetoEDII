@@ -54,11 +54,21 @@
     <Reference Include="Mono.Android" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdicionarActivity.cs" />
+    <Compile Include="BucketHash.cs" />
+    <Compile Include="FilaLista.cs" />
+    <Compile Include="IQueue.cs" />
+    <Compile Include="IStack.cs" />
+    <Compile Include="ListaSimples.cs" />
     <Compile Include="MainActivity.cs" />
+    <Compile Include="PilhaLista.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidResource Include="Resources\layout\Adicionar.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
     <None Include="GettingStarted.Xamarin" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Properties\AndroidManifest.xml" />
