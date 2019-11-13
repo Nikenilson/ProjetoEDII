@@ -60,7 +60,9 @@
             android:layout_margin="20dp"
             android:orientation="horizontal"
             android:layout_width="717px"
-            android:layout_height="578px" />
+            android:layout_height="160.5dp"
+            android:layout_marginBottom="0.0dp"
+            android:layout_marginRight="0.0dp" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -73,7 +75,7 @@
             android:layout_marginRight="20dp"
             android:id="@+id/edtResultados"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="55.5dp"
             android:background="@null"
             android:gravity="top|left"
             android:inputType="textMultiLine"
@@ -82,7 +84,8 @@
             android:scrollbars="vertical"
             android:lines="6"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:scrollHorizontally="false" />
+            android:scrollHorizontally="false"
+            android:layout_marginBottom="0.0dp" />
         <LinearLayout
             android:layout_margin="20dp"
             android:orientation="horizontal"
