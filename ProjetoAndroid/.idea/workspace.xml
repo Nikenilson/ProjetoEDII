@@ -6,13 +6,277 @@
     </shared>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f374f41e-684f-4fa8-9685-04c6abbed9e5" name="Default Changelist" comment="" />
+    <list default="true" id="b0f35cae-9003-430a-b9c4-73bca5bd7515" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/br/unicamp/cotuca/pathbetweencities/AdicionarCaminhoActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/br/unicamp/cotuca/pathbetweencities/AdicionarCidadeActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/br/unicamp/cotuca/pathbetweencities/caminho/Caminho.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/br/unicamp/cotuca/pathbetweencities/cidade/Cidade.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/br/unicamp/cotuca/pathbetweencities/exceptions/PilhaVaziaException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/br/unicamp/cotuca/pathbetweencities/fila/FilaLista.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/br/unicamp/cotuca/pathbetweencities/hash/BucketHash.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/br/unicamp/cotuca/pathbetweencities/interfaces/Fila.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/br/unicamp/cotuca/pathbetweencities/interfaces/Pilha.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/br/unicamp/cotuca/pathbetweencities/lista/ListaSimples.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/br/unicamp/cotuca/pathbetweencities/lista/NoLista.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/br/unicamp/cotuca/pathbetweencities/pilha/PilhaLista.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_adicionar_caminho.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_adicionar_cidade.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/.vs/PathBetweenCititesV2/v15/.suo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/.vs/PathBetweenCititesV2/v15/Server/sqlite3/db.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/.vs/PathBetweenCititesV2/v15/Server/sqlite3/storage.ide" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2.sln" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/AdicionarActivity.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/Assets/AboutAssets.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/BucketHash.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/FilaLista.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/GettingStarted.Xamarin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/IGravarEmArquivo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/IQueue.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/IStack.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/ListaSimples.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/MainActivity.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/NoLista.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/PathBetweenCititesV2.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/PathBetweenCititesV2.csproj.user" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/PilhaLista.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/PilhaVaziaException.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/Properties/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/Properties/AssemblyInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/Resources/AboutResources.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/Resources/Resource.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/Resources/layout/Adicionar.axml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/Resources/layout/Main.axml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/Resources/values/Strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/.cache/PathBetweenCititesV2.PathBetweenCititesV2.flag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/PathBetweenCititesV2.csproj.CoreCompileInputs.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/PathBetweenCititesV2.csproj.FileListAbsolute.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/PathBetweenCititesV2.csprojResolveAssemblyReference.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/PathBetweenCititesV2.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/PathBetweenCititesV2.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/R.cs.flag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/Schemas/25/android-layout-xml.xsd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/Schemas/25/schemas.android.com.apk.res.android.xsd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/Schemas/25/schemas.android.com.apk.res.auto.xsd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/Schemas/25/schemas.android.com.tools.xsd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/_dex_stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/_javac.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/acw-map.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/android/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/android/assets/Java.Interop.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/android/assets/Mono.Android.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/android/assets/Mono.Android.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/android/assets/Mono.Security.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/android/assets/Mono.Security.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/android/assets/PathBetweenCititesV2.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/android/assets/PathBetweenCititesV2.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/android/assets/System.Collections.Concurrent.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/android/assets/System.Collections.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/android/assets/System.ComponentModel.Composition.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/android/assets/System.ComponentModel.Composition.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/android/assets/System.Core.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/android/assets/System.Core.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/android/assets/System.Diagnostics.Debug.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/android/assets/System.Linq.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/android/assets/System.Net.Http.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/android/assets/System.Net.Http.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/android/assets/System.Reflection.Extensions.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/android/assets/System.Reflection.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/android/assets/System.Runtime.Extensions.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/android/assets/System.Runtime.InteropServices.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/android/assets/System.Runtime.Serialization.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/android/assets/System.Runtime.Serialization.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/android/assets/System.Runtime.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/android/assets/System.ServiceModel.Internals.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/android/assets/System.ServiceModel.Internals.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/android/assets/System.Threading.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/android/assets/System.Xml.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/android/assets/System.Xml.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/android/assets/System.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/android/assets/System.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/android/assets/machine.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/android/assets/mscorlib.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/android/assets/mscorlib.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/android/manifest/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/android/pathbetweencititesv2/pathbetweencititesv2/R.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/android/src/md50b8861538eb86a936498da8a7f2e996f/MainActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/android/src/mono/MonoPackageManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/android/src/mono/MonoRuntimeProvider.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/android/src/mono/android/Seppuku.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/android/src/mono/android/app/ApplicationRegistration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/android/src/mono/android/app/NotifyTimeZoneChanges.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/android/src/pathbetweencititesv2/pathbetweencititesv2/R.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/android/typemap.jm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/android/typemap.mj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/android_debug_keystore.flag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/build.props" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/designtime/libraryimports.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/designtime/libraryprojectimports.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/emulator-5554.deployment" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/libraryimports.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/libraryprojectimports.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/link.flag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/linkdst/PathBetweenCititesV2.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/linkdst/PathBetweenCititesV2.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/linkdst/PathBetweenCititesV2.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/linksrc/Java.Interop.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/linksrc/Mono.Android.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/linksrc/Mono.Android.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/linksrc/Mono.Security.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/linksrc/Mono.Security.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/linksrc/PathBetweenCititesV2.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/linksrc/PathBetweenCititesV2.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/linksrc/System.Collections.Concurrent.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/linksrc/System.Collections.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/linksrc/System.ComponentModel.Composition.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/linksrc/System.ComponentModel.Composition.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/linksrc/System.Core.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/linksrc/System.Core.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/linksrc/System.Diagnostics.Debug.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/linksrc/System.Linq.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/linksrc/System.Net.Http.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/linksrc/System.Net.Http.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/linksrc/System.Reflection.Extensions.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/linksrc/System.Reflection.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/linksrc/System.Runtime.Extensions.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/linksrc/System.Runtime.InteropServices.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/linksrc/System.Runtime.Serialization.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/linksrc/System.Runtime.Serialization.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/linksrc/System.Runtime.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/linksrc/System.ServiceModel.Internals.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/linksrc/System.ServiceModel.Internals.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/linksrc/System.Threading.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/linksrc/System.Xml.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/linksrc/System.Xml.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/linksrc/System.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/linksrc/System.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/linksrc/mscorlib.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/linksrc/mscorlib.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/lp/0.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/lp/map.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/res/layout/adicionar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/res/layout/main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/resolved_assemblies.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/resolved_inspector_assemblies.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/resourcepaths.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/static.flag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/strip.flag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/stub_application_data.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PathBetweenCititesV2/PathBetweenCititesV2/obj/Debug/upload.flag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projeto Anterior/CaminhosEntreCidadesMarte.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projeto Anterior/CidadesMarte.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projeto Anterior/Mapa Marte com Rotas Aereas.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projeto Anterior/Mapa Marte sem rotas.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projeto Anterior/Projeto base - apCaminhosMarte/.vs/apCaminhosMarte/v15/.suo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projeto Anterior/Projeto base - apCaminhosMarte/.vs/apCaminhosMarte/v15/Server/sqlite3/db.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projeto Anterior/Projeto base - apCaminhosMarte/.vs/apCaminhosMarte/v15/Server/sqlite3/storage.ide" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projeto Anterior/Projeto base - apCaminhosMarte/.vs/apCaminhosMarte/v15/Server/sqlite3/storage.ide-shm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projeto Anterior/Projeto base - apCaminhosMarte/.vs/apCaminhosMarte/v15/Server/sqlite3/storage.ide-wal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projeto Anterior/Projeto base - apCaminhosMarte/.vs/apCaminhosMarte/v16/.suo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projeto Anterior/Projeto base - apCaminhosMarte/.vs/apCaminhosMarte/v16/Server/sqlite3/db.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projeto Anterior/Projeto base - apCaminhosMarte/.vs/apCaminhosMarte/v16/Server/sqlite3/storage.ide" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projeto Anterior/Projeto base - apCaminhosMarte/apCaminhosMarte.sln" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projeto Anterior/Projeto base - apCaminhosMarte/apCaminhosMarte/App.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projeto Anterior/Projeto base - apCaminhosMarte/apCaminhosMarte/Arvore.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projeto Anterior/Projeto base - apCaminhosMarte/apCaminhosMarte/Caminho.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projeto Anterior/Projeto base - apCaminhosMarte/apCaminhosMarte/Cidade.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projeto Anterior/Projeto base - apCaminhosMarte/apCaminhosMarte/Form1.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projeto Anterior/Projeto base - apCaminhosMarte/apCaminhosMarte/Form1.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projeto Anterior/Projeto base - apCaminhosMarte/apCaminhosMarte/Form1.resx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projeto Anterior/Projeto base - apCaminhosMarte/apCaminhosMarte/ICopiavel.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projeto Anterior/Projeto base - apCaminhosMarte/apCaminhosMarte/IGravarEmArquivo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projeto Anterior/Projeto base - apCaminhosMarte/apCaminhosMarte/IStack.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projeto Anterior/Projeto base - apCaminhosMarte/apCaminhosMarte/ListaSimples.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projeto Anterior/Projeto base - apCaminhosMarte/apCaminhosMarte/NoArvore.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projeto Anterior/Projeto base - apCaminhosMarte/apCaminhosMarte/NoLista.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projeto Anterior/Projeto base - apCaminhosMarte/apCaminhosMarte/PilhaLista.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projeto Anterior/Projeto base - apCaminhosMarte/apCaminhosMarte/PilhaVaziaException.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projeto Anterior/Projeto base - apCaminhosMarte/apCaminhosMarte/Program.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projeto Anterior/Projeto base - apCaminhosMarte/apCaminhosMarte/Properties/AssemblyInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projeto Anterior/Projeto base - apCaminhosMarte/apCaminhosMarte/Properties/Resources.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projeto Anterior/Projeto base - apCaminhosMarte/apCaminhosMarte/Properties/Resources.resx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projeto Anterior/Projeto base - apCaminhosMarte/apCaminhosMarte/Properties/Settings.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projeto Anterior/Projeto base - apCaminhosMarte/apCaminhosMarte/Properties/Settings.settings" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projeto Anterior/Projeto base - apCaminhosMarte/apCaminhosMarte/apCaminhosMarte.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projeto Anterior/Projeto base - apCaminhosMarte/apCaminhosMarte/obj/Debug/DesignTimeResolveAssemblyReferences.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projeto Anterior/Projeto base - apCaminhosMarte/apCaminhosMarte/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projeto Anterior/Projeto base - apCaminhosMarte/apCaminhosMarte/obj/Debug/TempPE/Properties.Resources.Designer.cs.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projeto Anterior/Projeto base - apCaminhosMarte/apCaminhosMarte/obj/Debug/TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projeto Anterior/Projeto base - apCaminhosMarte/apCaminhosMarte/obj/Debug/TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projeto Anterior/Projeto base - apCaminhosMarte/apCaminhosMarte/obj/Debug/TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projeto Anterior/Projeto base - apCaminhosMarte/apCaminhosMarte/obj/Debug/apCaminhosMarte.Form1.resources" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projeto Anterior/Projeto base - apCaminhosMarte/apCaminhosMarte/obj/Debug/apCaminhosMarte.Properties.Resources.resources" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projeto Anterior/Projeto base - apCaminhosMarte/apCaminhosMarte/obj/Debug/apCaminhosMarte.csproj.CoreCompileInputs.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projeto Anterior/Projeto base - apCaminhosMarte/apCaminhosMarte/obj/Debug/apCaminhosMarte.csproj.FileListAbsolute.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projeto Anterior/Projeto base - apCaminhosMarte/apCaminhosMarte/obj/Debug/apCaminhosMarte.csproj.GenerateResource.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projeto Anterior/Projeto base - apCaminhosMarte/apCaminhosMarte/obj/Debug/apCaminhosMarte.csprojAssemblyReference.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projeto Anterior/Projeto base - apCaminhosMarte/apCaminhosMarte/obj/Debug/apCaminhosMarte.csprojResolveAssemblyReference.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projeto Anterior/Projeto base - apCaminhosMarte/apCaminhosMarte/obj/Debug/apCaminhosMarte.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projeto Anterior/Projeto base - apCaminhosMarte/apCaminhosMarte/obj/Debug/apCaminhosMarte.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projeto Anterior/mars_political_map_by_axiaterraartunion_d4vfxdf-pre.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projeto/Cidades.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projeto/GrafoTremEspanhaPortugal.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projeto/Matriz de adjacencia.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projeto/Projeto ED2 2019 matutino.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projeto/Thumbs.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projeto/mapaEspanhaPortugal.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projeto/tela do aplicativo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_activity_activity_1_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_annotation_annotation_1_1_0_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_appcompat_appcompat_1_1_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_appcompat_appcompat_resources_1_1_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_arch_core_core_common_2_1_0_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_arch_core_core_runtime_2_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_arch_core_core_runtime_2_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_collection_collection_1_1_0_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_constraintlayout_constraintlayout_1_1_3_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_constraintlayout_constraintlayout_1_1_3_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_core_core_1_1_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_cursoradapter_cursoradapter_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_cursoradapter_cursoradapter_1_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_customview_customview_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_customview_customview_1_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_drawerlayout_drawerlayout_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_drawerlayout_drawerlayout_1_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_fragment_fragment_1_1_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_interpolator_interpolator_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_interpolator_interpolator_1_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_common_2_1_0_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_2_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_2_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_core_2_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_core_2_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_runtime_2_1_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_viewmodel_2_1_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_loader_loader_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_loader_loader_1_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_savedstate_savedstate_1_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_test_espresso_espresso_core_3_2_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_test_espresso_espresso_idling_resource_3_2_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_test_monitor_1_2_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_test_monitor_1_2_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_test_runner_1_2_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_vectordrawable_vectordrawable_1_1_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_vectordrawable_vectordrawable_animated_1_1_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_versionedparcelable_versionedparcelable_1_1_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_viewpager_viewpager_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_viewpager_viewpager_1_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_javawriter_2_1_1_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_javawriter_2_1_1_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__javax_inject_javax_inject_1_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__javax_inject_javax_inject_1_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__junit_junit_4_12_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__junit_junit_4_12_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__net_sf_kxml_kxml2_2_3_0_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__net_sf_kxml_kxml2_2_3_0_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_integration_1_3_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_integration_1_3_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_library_1_3_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_library_1_3_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="testRunner" value="GRADLE" />
+    <option name="delegatedBuild" value="true" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="Nexus_4_API_28" />
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
@@ -21,26 +285,102 @@
     </system>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+    <leaf>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="171">
+              <caret line="39" column="12" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="12" />
+            </state>
+          </provider>
           <provider editor-type-id="android-designer2" />
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/br/unicamp/cotuca/a18169_18196_projetoed2/MainActivity.java">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/br/unicamp/cotuca/pathbetweencities/MainActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="476">
+              <caret line="47" column="26" lean-forward="true" selection-start-line="47" selection-start-column="26" selection-end-line="47" selection-end-column="26" />
+              <folding>
+                <element signature="e#1877#1885#0" expanded="true" />
+                <element signature="e#686#851#0" expanded="true" />
+                <element signature="e#850#851#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/br/unicamp/cotuca/pathbetweencities/cidade/Cidade.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="26" column="65" selection-start-line="26" selection-start-column="65" selection-end-line="26" selection-end-column="65" />
+              <folding>
+                <element signature="e#1000#1001#0" expanded="true" />
+                <element signature="e#1031#1032#0" expanded="true" />
+                <element signature="e#1076#1077#0" expanded="true" />
+                <element signature="e#1116#1117#0" expanded="true" />
+                <element signature="e#1151#1152#0" expanded="true" />
+                <element signature="e#1185#1186#0" expanded="true" />
+                <element signature="e#1236#1237#0" expanded="true" />
+                <element signature="e#1282#1283#0" expanded="true" />
+                <element signature="e#1317#1318#0" expanded="true" />
+                <element signature="e#1351#1352#0" expanded="true" />
+                <element signature="e#1402#1403#0" expanded="true" />
+                <element signature="e#1448#1449#0" expanded="true" />
+                <element signature="e#1485#1486#0" expanded="true" />
+                <element signature="e#1518#1519#0" expanded="true" />
+                <element signature="e#1570#1571#0" expanded="true" />
+                <element signature="e#1614#1615#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/br/unicamp/cotuca/pathbetweencities/exceptions/PilhaVaziaException.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/br/unicamp/cotuca/pathbetweencities/lista/NoLista.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/br/unicamp/cotuca/pathbetweencities/interfaces/Pilha.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/br/unicamp/cotuca/pathbetweencities/pilha/PilhaLista.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/br/unicamp/cotuca/pathbetweencities/lista/ListaSimples.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/br/unicamp/cotuca/pathbetweencities/interfaces/Fila.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/br/unicamp/cotuca/pathbetweencities/fila/FilaLista.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/br/unicamp/cotuca/pathbetweencities/hash/BucketHash.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_adicionar_cidade.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_adicionar_caminho.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/br/unicamp/cotuca/pathbetweencities/caminho/Caminho.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/br/unicamp/cotuca/pathbetweencities/cidade/Cidade.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/br/unicamp/cotuca/pathbetweencities/MainActivity.java" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectConfigurationFiles">
+    <option name="files">
+      <list>
+        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
+        <option value="$PROJECT_DIR$/.idea/gradle.xml" />
+      </list>
+    </option>
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="100" />
-    <option name="y" value="26" />
+    <option name="x" value="-462" />
+    <option name="y" value="-19" />
     <option name="width" value="1400" />
     <option name="height" value="820" />
   </component>
@@ -51,14 +391,58 @@
     </navigator>
     <panes>
       <pane id="ProjectPane" />
-      <pane id="AndroidView" />
       <pane id="PackagesPane" />
+      <pane id="AndroidView">
+        <subPane>
+          <expand>
+            <path>
+              <item name="PathBetweenCities" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+            </path>
+            <path>
+              <item name="PathBetweenCities" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+            </path>
+            <path>
+              <item name="PathBetweenCities" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="pathbetweencities" type="cbb59c9e:AndroidPsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PathBetweenCities" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="pathbetweencities" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="hash" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PathBetweenCities" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+            </path>
+            <path>
+              <item name="PathBetweenCities" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+              <item name="values" type="ddeffd01:AndroidResFolderTypeNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
-    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+  </component>
+  <component name="RecentsManager">
+    <key name="android.template.packageName">
+      <recent name="br.unicamp.cotuca.pathbetweencities" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -73,39 +457,6 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="&lt;template&gt;" type="Applet" default="true" selected="false">
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-    </configuration>
-    <configuration default="true" type="JUnit" factoryName="JUnit">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration name="&lt;template&gt;" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" default="true" selected="false">
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
-    </configuration>
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -127,7 +478,7 @@
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
       <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
       <option name="FORCE_STOP_RUNNING_APP" value="true" />
-      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
       <option name="USE_LAST_SELECTED_DEVICE" value="false" />
       <option name="PREFERRED_AVD" value="" />
       <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
@@ -166,68 +517,243 @@
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="TestNG">
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="f374f41e-684f-4fa8-9685-04c6abbed9e5" name="Default Changelist" comment="" />
-      <created>1571752937937</created>
+      <changelist id="b0f35cae-9003-430a-b9c4-73bca5bd7515" name="Default Changelist" comment="" />
+      <created>1574856657778</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1571752937937</updated>
+      <updated>1574856657778</updated>
     </task>
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <layout>
+      <window_info active="true" content_ui="combo" id="Project" visible="true" weight="0.17030849" />
+      <window_info id="Structure" side_tool="true" />
+      <window_info id="Build Variants" side_tool="true" />
+      <window_info id="Image Layers" />
+      <window_info id="Designer" />
+      <window_info id="Resources Explorer" />
+      <window_info id="Capture Tool" />
+      <window_info id="Favorites" side_tool="true" />
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.32945737" />
-      <window_info id="Structure" order="2" side_tool="true" />
-      <window_info id="Favorites" order="3" side_tool="true" />
-      <window_info id="Build Variants" order="4" side_tool="true" />
-      <window_info id="Image Layers" order="5" />
-      <window_info id="Designer" order="6" />
-      <window_info id="Resources Explorer" order="7" />
-      <window_info id="Capture Tool" order="8" />
-      <window_info anchor="bottom" id="Version Control" order="0" />
-      <window_info anchor="bottom" id="Logcat" order="1" />
-      <window_info anchor="bottom" id="TODO" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="4" side_tool="true" />
-      <window_info anchor="bottom" id="Build" order="5" visible="true" weight="0.32965517" />
-      <window_info anchor="bottom" id="Android Profiler" order="6" show_stripe_button="false" />
-      <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
-      <window_info anchor="right" id="Capture Analysis" order="1" />
-      <window_info anchor="right" id="Gradle" order="2" />
-      <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info anchor="right" id="Palette&#9;" order="4" />
+      <window_info anchor="bottom" id="Logcat" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="TODO" />
+      <window_info anchor="bottom" id="Android Profiler" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Build" visible="true" weight="0.20564516" />
+      <window_info anchor="right" id="Device File Explorer" side_tool="true" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Gradle" />
+      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="right" id="Preview" weight="0.32969153" />
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/br/unicamp/cotuca/pathbetweencities/fila/NoLista.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/br/unicamp/cotuca/pathbetweencities/lista/NoLista.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+          <folding>
+            <element signature="e#107#108#0" expanded="true" />
+            <element signature="e#134#135#0" expanded="true" />
+            <element signature="e#172#173#0" expanded="true" />
+            <element signature="e#204#205#0" expanded="true" />
+            <element signature="e#242#243#0" expanded="true" />
+            <element signature="e#269#270#0" expanded="true" />
+            <element signature="e#316#317#0" expanded="true" />
+            <element signature="e#348#349#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/br/unicamp/cotuca/pathbetweencities/exceptions/PilhaVaziaException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="19" lean-forward="true" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+          <folding>
+            <element signature="e#157#158#0" expanded="true" />
+            <element signature="e#183#184#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/br/unicamp/cotuca/pathbetweencities/interfaces/Pilha.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="53" selection-start-line="2" selection-start-column="53" selection-end-line="2" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/br/unicamp/cotuca/pathbetweencities/pilha/PilhaLista.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/br/unicamp/cotuca/pathbetweencities/lista/ListaSimples.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="19" column="11" lean-forward="true" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/br/unicamp/cotuca/pathbetweencities/interfaces/Fila.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="33" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/br/unicamp/cotuca/pathbetweencities/fila/FilaLista.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="38" column="49" selection-start-line="38" selection-start-column="49" selection-end-line="38" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#495#501#0" expanded="true" />
+            <element signature="e#1345#1346#0" expanded="true" />
+            <element signature="e#1397#1398#0" expanded="true" />
+            <element signature="e#1460#1461#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/br/unicamp/cotuca/pathbetweencities/AdicionarCidadeActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/br/unicamp/cotuca/pathbetweencities/AdicionarCaminhoActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_adicionar_cidade.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="61" column="39" lean-forward="true" selection-start-line="61" selection-start-column="39" selection-end-line="61" selection-end-column="39" />
+        </state>
+      </provider>
       <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_adicionar_caminho.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="969">
+          <caret line="57" column="39" selection-start-line="57" selection-start-column="39" selection-end-line="57" selection-end-column="39" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/br/unicamp/cotuca/pathbetweencities/hash/BucketHash.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="782">
+          <caret line="46" column="6" selection-start-line="46" selection-start-column="6" selection-end-line="46" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/br/unicamp/cotuca/pathbetweencities/caminho/Caminho.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1207">
+          <caret line="71" column="26" selection-start-line="71" selection-start-column="26" selection-end-line="71" selection-end-column="26" />
+          <folding>
+            <element signature="e#236#237#0" expanded="true" />
+            <element signature="e#273#274#0" expanded="true" />
+            <element signature="e#330#331#0" expanded="true" />
+            <element signature="e#382#383#0" expanded="true" />
+            <element signature="e#421#422#0" expanded="true" />
+            <element signature="e#459#460#0" expanded="true" />
+            <element signature="e#518#519#0" expanded="true" />
+            <element signature="e#572#573#0" expanded="true" />
+            <element signature="e#605#606#0" expanded="true" />
+            <element signature="e#637#638#0" expanded="true" />
+            <element signature="e#684#685#0" expanded="true" />
+            <element signature="e#726#727#0" expanded="true" />
+            <element signature="e#755#756#0" expanded="true" />
+            <element signature="e#783#784#0" expanded="true" />
+            <element signature="e#822#823#0" expanded="true" />
+            <element signature="e#856#857#0" expanded="true" />
+            <element signature="e#885#886#0" expanded="true" />
+            <element signature="e#913#914#0" expanded="true" />
+            <element signature="e#952#953#0" expanded="true" />
+            <element signature="e#986#987#0" expanded="true" />
+            <element signature="e#158#159#0" expanded="true" />
+            <element signature="e#182#183#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="39" column="12" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="12" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/br/unicamp/cotuca/pathbetweencities/cidade/Cidade.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="65" selection-start-line="26" selection-start-column="65" selection-end-line="26" selection-end-column="65" />
+          <folding>
+            <element signature="e#1000#1001#0" expanded="true" />
+            <element signature="e#1031#1032#0" expanded="true" />
+            <element signature="e#1076#1077#0" expanded="true" />
+            <element signature="e#1116#1117#0" expanded="true" />
+            <element signature="e#1151#1152#0" expanded="true" />
+            <element signature="e#1185#1186#0" expanded="true" />
+            <element signature="e#1236#1237#0" expanded="true" />
+            <element signature="e#1282#1283#0" expanded="true" />
+            <element signature="e#1317#1318#0" expanded="true" />
+            <element signature="e#1351#1352#0" expanded="true" />
+            <element signature="e#1402#1403#0" expanded="true" />
+            <element signature="e#1448#1449#0" expanded="true" />
+            <element signature="e#1485#1486#0" expanded="true" />
+            <element signature="e#1518#1519#0" expanded="true" />
+            <element signature="e#1570#1571#0" expanded="true" />
+            <element signature="e#1614#1615#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/Cidades.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/br/unicamp/cotuca/a18169_18196_projetoed2/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/br/unicamp/cotuca/pathbetweencities/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="47" column="26" lean-forward="true" selection-start-line="47" selection-start-column="26" selection-end-line="47" selection-end-column="26" />
+          <folding>
+            <element signature="e#1877#1885#0" expanded="true" />
+            <element signature="e#686#851#0" expanded="true" />
+            <element signature="e#850#851#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
