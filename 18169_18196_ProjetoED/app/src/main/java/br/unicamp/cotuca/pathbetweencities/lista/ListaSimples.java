@@ -216,4 +216,18 @@ public class ListaSimples<Dado extends Comparable<Dado>> {
         this.quantosNos = listaOrdenada.quantosNos;
         this.atual = this.anterior = null;
     }
+
+    public Dado[] toArray()
+    {
+        Object[] array = null;
+        if(!this.EstaVazia())
+        {
+            array = new Object[this.getQuantosNos()];
+            NoLista<Dado> atual = this.getPrimeiro();
+            for(int i = 0; atual.getProx() != null; i++)
+                array[i] = atual.toString();
+        }
+
+        return (Dado[])array;
+    }
 }

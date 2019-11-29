@@ -1,5 +1,7 @@
 package br.unicamp.cotuca.pathbetweencities.lista;
 
+import androidx.annotation.NonNull;
+
 public class NoLista<Dado> {
     private Dado info;
     private NoLista<Dado> prox;
@@ -24,5 +26,11 @@ public class NoLista<Dado> {
 
     public void setProx(NoLista<Dado> prox) {
         this.prox = prox;
+    }
+
+    @NonNull
+    @Override
+    public String toString() {
+        return info.toString();
     }
 }

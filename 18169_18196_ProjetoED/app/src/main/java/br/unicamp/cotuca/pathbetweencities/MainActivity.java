@@ -22,6 +22,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 
 import br.unicamp.cotuca.pathbetweencities.cidade.Cidade;
+import br.unicamp.cotuca.pathbetweencities.lista.ListaSimples;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -43,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         ActivityCompat.requestPermissions(this,
                 new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},
                 PERMISSION_EXTERNAL_STORAGE);
-        String[] arrayCidades = new String[256];
+        ListaSimples<String> listaCidades = new ListaSimples<>();
         File sdcard = Environment.getExternalStorageDirectory();
         File file = new File(sdcard.getPath() + "/Download/Cidades.txt");
         StringBuilder stringBuilder = new StringBuilder();
@@ -55,9 +56,9 @@ public class MainActivity extends AppCompatActivity {
             while ((receiveString = bufferedReader.readLine()) != null ) {
                 stringBuilder.append(receiveString);
                 Cidade c = new Cidade(receiveString);
-                arrayCidades[i] = c.getNomeCidade();
+                listaCidades.InserirAposFim(c.getNomeCidade());
             }
-
+            String arrayCidades[] = listaCidades.toArray();
             ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
                     android.R.layout.simple_spinner_item, arrayCidades);
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);

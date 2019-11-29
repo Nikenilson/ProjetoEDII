@@ -1,12 +1,13 @@
 package br.unicamp.cotuca.pathbetweencities.cidade;
 
 public class Cidade{
-    private int idCidade, coordenadaX, coordenadaY;
+    private int idCidade;
+    private float coordenadaX, coordenadaY;
     private String nomeCidade;
 
-    protected final int tamanhoId = 3;
-    protected final int inicioNomeCidade = 3;
-    protected final int tamanhoNomeCidade = 15;
+    protected final int tamanhoId = 2;
+    protected final int inicioNomeCidade = 2;
+    protected final int tamanhoNomeCidade = 16;
     protected final int inicioX = inicioNomeCidade + tamanhoNomeCidade;
     protected final int tamanhoCoord = 5;
     protected final int inicioY = inicioX + tamanhoCoord;
@@ -22,9 +23,9 @@ public class Cidade{
     public Cidade (String linha)
     {
         setIdCidade(Integer.parseInt(linha.substring(0, tamanhoId)));
-        setNomeCidade(linha.substring(inicioNomeCidade, tamanhoNomeCidade));
-        setCoordenadaX( Integer.parseInt(linha.substring(inicioX, tamanhoCoord)));
-        setCoordenadaY(Integer.parseInt(linha.substring(inicioY)));
+        setNomeCidade(linha.substring(inicioNomeCidade, inicioNomeCidade+tamanhoNomeCidade));
+        setCoordenadaX(Float.parseFloat(linha.substring(inicioX, inicioX+tamanhoCoord)));
+        setCoordenadaY(Float.parseFloat(linha.substring(inicioY)));
     }
 
     public int getIdCidade() {
@@ -35,19 +36,19 @@ public class Cidade{
         this.idCidade = idCidade;
     }
 
-    public int getCoordenadaX() {
+    public float getCoordenadaX() {
         return coordenadaX;
     }
 
-    public void setCoordenadaX(int coordenadaX) {
+    public void setCoordenadaX(float coordenadaX) {
         this.coordenadaX = coordenadaX;
     }
 
-    public int getCoordenadaY() {
+    public float getCoordenadaY() {
         return coordenadaY;
     }
 
-    public void setCoordenadaY(int coordenadaY) {
+    public void setCoordenadaY(float coordenadaY) {
         this.coordenadaY = coordenadaY;
     }
 
