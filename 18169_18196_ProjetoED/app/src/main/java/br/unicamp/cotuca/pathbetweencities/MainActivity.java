@@ -5,12 +5,18 @@ import androidx.core.app.ActivityCompat;
 
 import android.Manifest;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
 import android.os.Bundle;
 import android.os.Environment;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -29,13 +35,15 @@ import br.unicamp.cotuca.pathbetweencities.pilha.PilhaLista;
 
 public class MainActivity extends AppCompatActivity {
 
+    public static final int PERMISSION_EXTERNAL_STORAGE = 1;
+    int qtosDados = 0, corAtual;
+    CidadeView canvaImagem;
     Button btnBuscar, btnAddCidade, btnAddCaminho;
     Spinner spOrigem, spDestino;
     EditText edtResultados;
-    public static final int PERMISSION_EXTERNAL_STORAGE = 1;
+
     BucketHashCidade hashCidades = new BucketHashCidade();
     ArrayList<Cidade>[] arrayCidades = hashCidades.getData();
-    int qtosDados = 0, corAtual;
     //Arvore<Cidade> arvore;
     Caminho[][] matAdjacencias;
     PilhaLista<PilhaLista<Caminho>> caminhosDescobertos;
@@ -46,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        canvaImagem = findViewById(R.id.canvaImagem);
         btnBuscar = findViewById(R.id.btnBuscar);
         btnAddCaminho = findViewById(R.id.btnAddCaminho);
         btnAddCidade = findViewById(R.id.btnAddCidade);
@@ -76,6 +85,8 @@ public class MainActivity extends AppCompatActivity {
             Cidade[] arrayCidades = new Cidade[arrayCidadesObject.length];
             for(int i = 0; i < arrayCidadesObject.length; i++)
                 arrayCidades[i] = (Cidade)arrayCidadesObject[i];
+
+            desenharPontos(arrayCidades);
 
             String arrayNomeCidades[] = new String[arrayCidades.length];
             for(int i = 0; i < arrayCidadesObject.length; i++)
@@ -109,8 +120,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    public void criarGrafo()
-    {
+    public void criarGrafo() {
         matAdjacencias = new Caminho[qtosDados][qtosDados];
         File sdcard = Environment.getExternalStorageDirectory();
         File file = new File(sdcard.getPath() + "/Download/GrafoTremEspanhaPortugal.txt");
@@ -136,10 +146,8 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void buscarCaminhos(int cdOrigem, int cdDestino)
-    {
-        if (cdOrigem != cdDestino)
-        {
+    public void buscarCaminhos(int cdOrigem, int cdDestino) {
+        if (cdOrigem != cdDestino) {
             boolean achouTodos = false;
             boolean[] passouCidade = new boolean[qtosDados + 1];
             int c = 0;
@@ -148,14 +156,11 @@ public class MainActivity extends AppCompatActivity {
 
             for (int i = 0; i < qtosDados; i++)
                 passouCidade[i] = false;
-            do
-            {
-                if (cdOrigem == cdDestino || c >= qtosDados)
-                {
+            do {
+                if (cdOrigem == cdDestino || c >= qtosDados) {
                     if (caminhos.estaVazia())
                         achouTodos = true;
-                    else
-                    {
+                    else {
                         try{
                             if (cdOrigem == cdDestino)
                                 caminhosDescobertos.empilhar(caminhos.copia());
@@ -171,10 +176,8 @@ public class MainActivity extends AppCompatActivity {
                         }
                     }
                 }
-                if (c < qtosDados && matAdjacencias[cdOrigem][c] != null)
-                {
-                    if (passouCidade[c] != true)
-                    {
+                if (c < qtosDados && matAdjacencias[cdOrigem][c] != null) {
+                    if (passouCidade[c] != true) {
                         passouCidade[cdOrigem] = true;
                         caminhos.empilhar(matAdjacencias[cdOrigem][c]);
                         cdOrigem = c;
@@ -188,14 +191,14 @@ public class MainActivity extends AppCompatActivity {
             /*if (!caminhosDescobertos.EstaVazia())
                 AcharMelhorCaminho(caminhosDescobertos);*/
         }
-        /*else
+        else
         if (cdOrigem != -1 && cdDestino != -1)
-            MessageBox.Show("Você já está na cidade!");*/
+            Toast.makeText(getApplicationContext(), "Você já está na cidade !", Toast.LENGTH_SHORT).show();
+
 
     }
 
-    public void exibirCaminhos(PilhaLista<PilhaLista<Caminho>> caminhos)
-    {
+    public void exibirCaminhos(PilhaLista<PilhaLista<Caminho>> caminhos) {
         PilhaLista<PilhaLista<Caminho>> pilhaCopia = caminhos.copia();
 
         while(!caminhos.estaVazia()){
@@ -207,6 +210,7 @@ public class MainActivity extends AppCompatActivity {
                     aux.empilhar(pcAtual.desempilhar());
 
                 Caminho cAtual = null;
+                ListaSimples<Cidade> cidadesPrintar = new ListaSimples<>();
                 int i = 1;
                 edtResultados.append("Caminho Nº " + i);
                 while (!aux.estaVazia())
@@ -215,7 +219,14 @@ public class MainActivity extends AppCompatActivity {
                     int indiceO = hashCidades.hash(cAtual.getNomeCidadeOrigem());
                     int indiceD = hashCidades.hash(cAtual.getNomeCidadeDestino());
                     edtResultados.append(arrayCidades[indiceO].get(0).getNomeCidade() + " -> " + arrayCidades[indiceD].get(0).getNomeCidade());
+                    cidadesPrintar.InserirAposFim(arrayCidades[indiceO].get(0));
+                    cidadesPrintar.InserirAposFim(arrayCidades[indiceD].get(0));
                 }
+                Object[] o = cidadesPrintar.toArray();
+                Cidade[] cidadesAPrintar = new Cidade[o.length];
+                for(int indiceObj = 0; indiceObj < o.length; indiceObj++)
+                    cidadesAPrintar[indiceObj] = (Cidade)o[indiceObj];
+                desenharLinhas(cidadesAPrintar);
                 edtResultados.append("\n");
                 i++;
             }catch (Exception e){
@@ -223,5 +234,20 @@ public class MainActivity extends AppCompatActivity {
             }
         }
         caminhosDescobertos = pilhaCopia;
+    }
+
+    public void desenharPontos(Cidade[] cidades) {
+        Bitmap bmp = Bitmap.createBitmap(500,500, Bitmap.Config.ARGB_8888);
+        Canvas ponto = new Canvas(bmp);
+        canvaImagem.setePonto(true);
+        canvaImagem.setCidades(cidades);
+        canvaImagem.draw(ponto);
+    }
+
+    public void desenharLinhas(Cidade[] cidades){
+        Canvas linha = new Canvas();
+        canvaImagem.setePonto(false);
+        canvaImagem.setCidades(cidades);
+        canvaImagem.draw(linha);
     }
 }
