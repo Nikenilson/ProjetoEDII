@@ -1,6 +1,6 @@
 package br.unicamp.cotuca.pathbetweencities.cidade;
 
-public class Cidade{
+public class Cidade implements Comparable<Cidade>{
     private int idCidade;
     private float coordenadaX, coordenadaY;
     private String nomeCidade;
@@ -22,10 +22,10 @@ public class Cidade{
 
     public Cidade (String linha)
     {
-        setIdCidade(Integer.parseInt(linha.substring(0, tamanhoId)));
-        setNomeCidade(linha.substring(inicioNomeCidade, inicioNomeCidade+tamanhoNomeCidade));
-        setCoordenadaX(Float.parseFloat(linha.substring(inicioX, inicioX+tamanhoCoord)));
-        setCoordenadaY(Float.parseFloat(linha.substring(inicioY)));
+        setIdCidade(Integer.parseInt(linha.substring(0, tamanhoId).trim()));
+        setNomeCidade(linha.substring(inicioNomeCidade, inicioNomeCidade+tamanhoNomeCidade).trim());
+        setCoordenadaX(Float.parseFloat(linha.substring(inicioX, inicioX+tamanhoCoord).trim()));
+        setCoordenadaY(Float.parseFloat(linha.substring(inicioY).trim()));
     }
 
     public int getIdCidade() {
@@ -58,5 +58,10 @@ public class Cidade{
 
     public void setNomeCidade(String nomeCidade) {
         this.nomeCidade = nomeCidade;
+    }
+
+    @Override
+    public int compareTo(Cidade cidade) {
+        return 0;
     }
 }

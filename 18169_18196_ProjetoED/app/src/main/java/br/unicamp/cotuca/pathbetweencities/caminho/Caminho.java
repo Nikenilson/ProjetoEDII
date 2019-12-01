@@ -1,22 +1,25 @@
 package br.unicamp.cotuca.pathbetweencities.caminho;
 
-public class Caminho implements Comparable<Caminho> {
-    private int idCidadeOrigem, idCidadeDestino, distancia, tempo, custo;
+import br.unicamp.cotuca.pathbetweencities.interfaces.Copiavel;
 
-    public int getIdCidadeOrigem() {
-        return idCidadeOrigem;
+public class Caminho implements Comparable<Caminho>, Copiavel<Caminho> {
+    private String nomeCidadeOrigem, nomeCidadeDestino;
+    private int distancia, tempo;
+
+    public String getNomeCidadeOrigem() {
+        return nomeCidadeOrigem;
     }
 
-    public void setIdCidadeOrigem(int idCidadeOrigem) {
-        this.idCidadeOrigem = idCidadeOrigem;
+    public void setNomeCidadeOrigem(String nomeCidadeOrigem) {
+        this.nomeCidadeOrigem = nomeCidadeOrigem;
     }
 
-    public int getIdCidadeDestino() {
-        return idCidadeDestino;
+    public String getNomeCidadeDestino() {
+        return nomeCidadeDestino;
     }
 
-    public void setIdCidadeDestino(int idCidadeDestino) {
-        this.idCidadeDestino = idCidadeDestino;
+    public void setNomeCidadeDestino(String nomeCidadeDestino) {
+        this.nomeCidadeDestino = nomeCidadeDestino;
     }
 
     public int getDistancia() {
@@ -35,45 +38,43 @@ public class Caminho implements Comparable<Caminho> {
         this.tempo = tempo;
     }
 
-    public int getCusto() {
-        return custo;
-    }
-
-    public void setCusto(int custo) {
-        this.custo = custo;
-    }
-
-    final int inicioIdCidadeOrigem = 0;
-    final int tamanhoIdCidadeOrigem = 3;
-    final int inicioIdCidadeDestino = inicioIdCidadeOrigem + tamanhoIdCidadeOrigem;
-    final int tamanhoIdCidadeDestino = 3;
-    final int inicioDistancia = inicioIdCidadeDestino + tamanhoIdCidadeDestino;
-    final int tamanhoDistancia = 5;
-    final int inicioTempo = inicioDistancia + tamanhoDistancia;
-    final int tamanhoTempo = 4;
-    final int inicioCusto = inicioTempo + tamanhoTempo;
-
+    final int inicioNomeCidadeOrigem = 0;
+    final int tamanhoNomeCidadeOrigem = 14;
+    final int inicioNomeCidadeDestino = inicioNomeCidadeOrigem + tamanhoNomeCidadeOrigem;
+    final int tamanhoNomeCidadeDestino = inicioNomeCidadeDestino + 16;
+    final int inicioDistancia =  tamanhoNomeCidadeDestino+1;
+    final int tamanhoDistancia = inicioDistancia + 5;
+    final int inicioTempo = tamanhoDistancia;
 
     public Caminho(String linha)
     {
-        this.setIdCidadeOrigem(Integer.parseInt(linha.substring(inicioIdCidadeOrigem,tamanhoIdCidadeOrigem)));
-        this.setIdCidadeDestino(Integer.parseInt(linha.substring(inicioIdCidadeDestino,tamanhoIdCidadeDestino)));
-        this.setDistancia(Integer.parseInt(linha.substring(inicioDistancia,tamanhoDistancia)));;
-        this.setTempo(Integer.parseInt(linha.substring(inicioTempo,tamanhoTempo)));
-        this.setCusto(Integer.parseInt(linha.substring(inicioCusto)));
+        this.setNomeCidadeOrigem(linha.substring(inicioNomeCidadeOrigem,tamanhoNomeCidadeOrigem).trim());
+        this.setNomeCidadeDestino(linha.substring(inicioNomeCidadeDestino,tamanhoNomeCidadeDestino).trim());
+        this.setDistancia(Integer.parseInt(linha.substring(inicioDistancia,tamanhoDistancia).trim()));
+        this.setTempo(Integer.parseInt(linha.substring(inicioTempo).trim()));
     }
 
     public Caminho()
     {
-        this.setIdCidadeOrigem(-1);
-        this.setIdCidadeDestino(-1);
+        this.setNomeCidadeOrigem("");
+        this.setNomeCidadeDestino("");
         this.setDistancia(-1);
         this.setTempo(-1);
-        this.setCusto(-1);
     }
 
     @Override
     public int compareTo(Caminho o) {
         return 0;
+    }
+
+    public Caminho copia()
+    {
+        Caminho c = new Caminho();
+        c.setNomeCidadeOrigem(this.getNomeCidadeOrigem());
+        c.setNomeCidadeDestino(this.getNomeCidadeDestino());
+        c.setDistancia(this.getDistancia());
+        c.setTempo(this.getTempo());
+
+        return c;
     }
 }

@@ -1,9 +1,9 @@
 package br.unicamp.cotuca.pathbetweencities.interfaces;
 
-public interface Pilha<Dado extends Comparable<Dado>>{
-    void Empilhar(Dado elemento);
-    Dado Desempilhar() throws Exception;
-    Dado OTopo() throws Exception;
-    boolean EstaVazia();
-    int Tamanho();
+public interface Pilha<Dado extends Copiavel<Dado>>{
+    void empilhar(Dado elemento);
+    Dado desempilhar() throws Exception;
+    Dado oTopo() throws Exception;
+    boolean estaVazia();
+    int tamanho();
 }

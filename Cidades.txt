@@ -1,13 +1,13 @@
-00Covilhã         0.252 0.479
-01A Coruna        0.195 0.151
-02Albacete        0.609 0.609
-03Alicante        0.697 0.675
-04Barcelona       0.864 0.363
-05Bilbao          0.542 0.164
-06Braga           0.194 0.344
-07Burgos          0.494 0.261
-08Caceres         0.324 0.561
-09Cadiz           0.327 0.854
+ 0Covilhã         0.252 0.479
+ 1A Coruna        0.195 0.151
+ 2Albacete        0.609 0.609
+ 3Alicante        0.697 0.675
+ 4Barcelona       0.864 0.363
+ 5Bilbao          0.542 0.164
+ 6Braga           0.194 0.344
+ 7Burgos          0.494 0.261
+ 8Caceres         0.324 0.561
+ 9Cadiz           0.327 0.854
 10Cartagena       0.666 0.751
 11Castelo Branco  0.252 0.524
 12Coimbra         0.193 0.485
