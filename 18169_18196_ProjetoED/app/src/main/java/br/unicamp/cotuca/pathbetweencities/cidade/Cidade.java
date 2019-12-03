@@ -1,6 +1,10 @@
 package br.unicamp.cotuca.pathbetweencities.cidade;
 
-public class Cidade implements Comparable<Cidade>{
+import java.io.Serializable;
+
+import br.unicamp.cotuca.pathbetweencities.interfaces.Copiavel;
+
+public class Cidade implements Comparable<Cidade>, Copiavel<Cidade>, Serializable {
     private int idCidade;
     private float coordenadaX, coordenadaY;
     private String nomeCidade;
@@ -12,7 +16,7 @@ public class Cidade implements Comparable<Cidade>{
     protected final int tamanhoCoord = 5;
     protected final int inicioY = inicioX + tamanhoCoord;
 
-    public Cidade(int id, int x, int y, String nome)
+    public Cidade(int id, float x, float y, String nome)
     {
         this.setIdCidade(id);
         this.setCoordenadaX(x);
@@ -63,5 +67,11 @@ public class Cidade implements Comparable<Cidade>{
     @Override
     public int compareTo(Cidade cidade) {
         return 0;
+    }
+
+    @Override
+    public Cidade copia() {
+        Cidade c = new Cidade(this.getIdCidade(), this.getCoordenadaX(), this.getCoordenadaY(), this.getNomeCidade());
+        return c;
     }
 }

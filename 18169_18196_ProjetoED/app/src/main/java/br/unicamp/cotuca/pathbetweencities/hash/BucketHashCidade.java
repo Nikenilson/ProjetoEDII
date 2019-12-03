@@ -1,5 +1,6 @@
 package br.unicamp.cotuca.pathbetweencities.hash;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import br.unicamp.cotuca.pathbetweencities.cidade.Cidade;
 

@@ -1,8 +1,10 @@
 package br.unicamp.cotuca.pathbetweencities.caminho;
 
+import java.io.Serializable;
+
 import br.unicamp.cotuca.pathbetweencities.interfaces.Copiavel;
 
-public class Caminho implements Comparable<Caminho>, Copiavel<Caminho> {
+public class Caminho implements Comparable<Caminho>, Copiavel<Caminho>, Serializable {
     private String nomeCidadeOrigem, nomeCidadeDestino;
     private int distancia, tempo;
 
@@ -46,6 +48,13 @@ public class Caminho implements Comparable<Caminho>, Copiavel<Caminho> {
     final int tamanhoDistancia = inicioDistancia + 5;
     final int inicioTempo = tamanhoDistancia;
 
+    public Caminho(String nomeCidadeOrigem, String nomeCidadeDestino, int distancia, int tempo){
+        this.setNomeCidadeOrigem(nomeCidadeOrigem);
+        this.setNomeCidadeDestino(nomeCidadeDestino);
+        this.setDistancia(distancia);
+        this.setTempo(tempo);
+    }
+
     public Caminho(String linha)
     {
         this.setNomeCidadeOrigem(linha.substring(inicioNomeCidadeOrigem,tamanhoNomeCidadeOrigem).trim());
@@ -59,7 +68,7 @@ public class Caminho implements Comparable<Caminho>, Copiavel<Caminho> {
         this.setNomeCidadeOrigem("");
         this.setNomeCidadeDestino("");
         this.setDistancia(-1);
-        this.setTempo(-1);
+        this.setTempo(Integer.MAX_VALUE);
     }
 
     @Override

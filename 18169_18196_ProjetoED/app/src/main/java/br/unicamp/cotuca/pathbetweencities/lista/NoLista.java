@@ -2,7 +2,9 @@ package br.unicamp.cotuca.pathbetweencities.lista;
 
 import androidx.annotation.NonNull;
 
-public class NoLista<Dado> {
+import java.io.Serializable;
+
+public class NoLista<Dado> implements Serializable {
     private Dado info;
     private NoLista<Dado> prox;
 

@@ -1,6 +1,8 @@
 package br.unicamp.cotuca.pathbetweencities.lista;
 
-public class ListaSimples<Dado extends Comparable<Dado>> {
+import java.io.Serializable;
+
+public class ListaSimples<Dado extends Comparable<Dado>> implements Serializable {
     private NoLista<Dado> anterior, primeiro, ultimo, atual;
     int quantosNos;
 

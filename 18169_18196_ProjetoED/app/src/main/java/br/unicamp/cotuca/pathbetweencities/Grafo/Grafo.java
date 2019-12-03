@@ -4,30 +4,37 @@ import android.widget.EditText;
 
 import java.util.Stack;
 
+import br.unicamp.cotuca.pathbetweencities.caminho.Caminho;
 import br.unicamp.cotuca.pathbetweencities.cidade.Cidade;
+import br.unicamp.cotuca.pathbetweencities.interfaces.Pilha;
+import br.unicamp.cotuca.pathbetweencities.pilha.PilhaLista;
 
 public class Grafo {
     private Vertice[] vertices;
-    private int[][] adjMatrix;
+    private Caminho[][] adjMatrix;
     int numVerts;
     int verticeAtualVetor = 0;
+    int[] verticesPassados;
+
+    public int[] getVerticesPassados() {
+        return verticesPassados;
+    }
 
     /// DJIKSTRA
     Tempo[] percurso;
     int infinity = Integer.MAX_VALUE;
-    int verticeAtual; // global usada para indicar o vértice atualmente sendo visitado
-    int doInicioAteAtual; // global usada para ajustar menor caminho com Djikstra
-    int nTree;
+    int verticeAtual;
+    int doInicioAteAtual;
+    int tempoMinimo;
 
     public Grafo(int numVerts)
     {
         this.numVerts = numVerts;
         vertices = new Vertice[numVerts];
-        adjMatrix = new int[numVerts][numVerts];
-        nTree = 0;
-        for (int j = 0; j < numVerts; j++) // zera toda a matriz
+        adjMatrix = new Caminho[numVerts][numVerts];
+        for (int j = 0; j < numVerts; j++)
             for (int k = 0; k < numVerts; k++)
-                adjMatrix[j][k] = infinity; // distância tão grande que não existe
+                adjMatrix[j][k] = new Caminho();
         percurso = new Tempo[numVerts];
     }
 
@@ -37,9 +44,9 @@ public class Grafo {
         verticeAtualVetor++;
     }
 
-    public void novaAresta(int origem, int destino, int tempo)
+    public void novaAresta(int origem, int destino, Caminho peso)
     {
-        adjMatrix[origem][destino] = tempo;
+        adjMatrix[origem][destino] = peso;
     }
 
     public String acharCaminho(int inicioDoPercurso, int finalDoPercurso, EditText lista)
@@ -49,23 +56,16 @@ public class Grafo {
         vertices[inicioDoPercurso].foiVisitado = true;
         for (int j = 0; j < numVerts; j++)
         {
-            // anotamos no vetor percurso a distância entre o inicioDoPercurso e cada vértice
-            // se não há ligação direta, o valor da distância será infinity
-            int tempDist = adjMatrix[inicioDoPercurso][j];
+            int tempDist = adjMatrix[inicioDoPercurso][j].getTempo();
             percurso[j] = new Tempo(inicioDoPercurso, tempDist);
         }
         for (int nTree = 0; nTree < numVerts; nTree++) {
-            // Procuramos a saída não visitada do vértice inicioDoPercurso com a menor distância
             int indiceDoMenor = obterMenor();
-            // e anotamos essa menor distância
-            int tempoMinimo = percurso[indiceDoMenor].getTempo();
-            // o vértice com a menor distância passa a ser o vértice atual
-            // para compararmos com a distância calculada em AjustarMenorCaminho()
+            tempoMinimo = percurso[indiceDoMenor].getTempo();
             verticeAtual = indiceDoMenor;
             doInicioAteAtual = percurso[indiceDoMenor].getTempo();
-            // visitamos o vértice com a menor distância desde o inicioDoPercurso
             vertices[verticeAtual].foiVisitado = true;
-            ajustarMenorCaminho(lista);
+            ajustarMenorCaminho();
         }
 
         return exibirPercursos(inicioDoPercurso, finalDoPercurso);
@@ -76,7 +76,7 @@ public class Grafo {
         int distanciaMinima = infinity;
         int indiceDaMinima = 0;
         for (int j = 0; j < numVerts; j++)
-            if (!(vertices[j].foiVisitado) && (percurso[j].getTempo() <distanciaMinima))
+            if (!(vertices[j].foiVisitado) && (percurso[j].getTempo() < distanciaMinima))
             {
                 distanciaMinima = percurso[j].getTempo();
                 indiceDaMinima = j;
@@ -84,84 +84,71 @@ public class Grafo {
         return indiceDaMinima;
     }
 
-    public void ajustarMenorCaminho(EditText lista)
+    public void ajustarMenorCaminho()
     {
         for (int coluna = 0; coluna < numVerts; coluna++)
-            if (!vertices[coluna].foiVisitado) // para cada vértice ainda não visitado
+            if (!vertices[coluna].foiVisitado && adjMatrix[verticeAtual][coluna].getTempo() != infinity)
             {
-                // acessamos a distância desde o vértice atual (pode ser infinity)
-                int atualAteMargem = adjMatrix[verticeAtual][coluna];
-                // calculamos a distância desde inicioDoPercurso passando por vertice atual até
-                // esta saída
+                int atualAteMargem = adjMatrix[verticeAtual][coluna].getTempo();
                 int doInicioAteMargem = doInicioAteAtual + atualAteMargem;
-                // quando encontra uma distância menor, marca o vértice a partir do
-                // qual chegamos no vértice de índice coluna, e a soma da distância
-                // percorrida para nele chegar
                 int distanciaDoCaminho = percurso[coluna].getTempo();
                 if (doInicioAteMargem < distanciaDoCaminho)
                 {
                     percurso[coluna].verticePai = verticeAtual;
                     percurso[coluna].setTempo(doInicioAteMargem);
-                    exibirTabela(lista);
                 }
             }
-        lista.append("==================Tempo ajustado==============");
-        lista.append(" ");
-    }
-
-    public void exibirTabela(EditText lista)
-    {
-        String dist = "";
-        lista.append("Vértice\tVisitado?\tPeso\tVindo de");
-        for (int i = 0; i < numVerts; i++)
-        {
-            if (percurso[i].getTempo() == infinity)
-                dist = "inf";
-            else
-                dist = new Integer(percurso[i].getTempo()).toString();
-            lista.append(vertices[i].getCidade().getNomeCidade() + "\t" + vertices[i].foiVisitado +
-                    "\t\t" + dist + "\t" + vertices[percurso[i].verticePai].getCidade().getNomeCidade());
-        }
-        lista.append("-----------------------------------------------------");
     }
 
     public String exibirPercursos(int inicioDoPercurso, int finalDoPercurso)
     {
         String resultado = "";
-        /*for (int j = 0; j < numVerts; j++)
-        {
-            Console.Write(vertices[j].rotulo + "=");
-            if (percurso[j].distancia == infinity)
-                Console.Write("inf");
-            else
-                Console.Write(percurso[j].distancia);
-            String pai = vertices[percurso[j].verticePai].rotulo;
-            Console.Write("(" + pai + ") ");
-        }
-        Console.WriteLine();
-        Console.WriteLine();
-        Console.WriteLine("Tempo entre " + vertices[inicioDoPercurso].rotulo +
-                " e " + vertices[finalDoPercurso].rotulo);
-        Console.WriteLine();*/
-        int onde = finalDoPercurso;
-        Stack<Cidade> pilha = new Stack();
-        int cont = 0;
+        int onde = finalDoPercurso, cont = 0, tempo = 0, distancia = 0;
+        PilhaLista<Cidade> pilha = new PilhaLista<>();
         while (onde != inicioDoPercurso)
         {
             onde = percurso[onde].verticePai;
-            pilha.push(vertices[onde].getCidade());
+            pilha.empilhar(vertices[onde].getCidade());
             cont++;
         }
-        while (pilha.size() != 0)
+        verticesPassados = new int[pilha.tamanho()+1];
+        Pilha<Cidade> aux = pilha.copia();
+        int i = 0;
+        while(!aux.estaVazia()){
+            try{
+                verticesPassados[i] = aux.desempilhar().getIdCidade();
+                i++;
+            }catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        verticesPassados[i] = finalDoPercurso;
+        int c1 = 0, c2 = 0;
+        while(c1 < verticesPassados.length && c2 < verticesPassados.length) {
+            c2++;
+            if(c1 < verticesPassados.length && c2 < verticesPassados.length){
+                tempo += adjMatrix[verticesPassados[c1]][verticesPassados[c2]].getTempo();
+                distancia += adjMatrix[verticesPassados[c1]][verticesPassados[c2]].getDistancia();
+            }
+            c1 = c2;
+        }
+        while (pilha.tamanho() != 0)
         {
-            resultado += pilha.pop();
-            if (pilha.size() != 0)
-                resultado += " --> ";
+            try{
+                resultado += pilha.desempilhar().getNomeCidade();
+                if (pilha.tamanho() != 0)
+                    resultado += " --> ";
+            }catch (Exception e){
+                e.printStackTrace();
+            }
         }
         if ((cont == 1) && (percurso[finalDoPercurso].getTempo() == infinity))
             resultado = "Não há caminho";
-        else
+        else{
             resultado += " --> " + vertices[finalDoPercurso].getCidade().getNomeCidade();
+            resultado += "\nTempo: " + tempo;
+            resultado += "\nDistancia: " + distancia;
+        }
         return resultado;
     }
 }
