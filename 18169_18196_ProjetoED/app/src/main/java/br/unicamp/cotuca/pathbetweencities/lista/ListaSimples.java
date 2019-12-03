@@ -54,32 +54,32 @@ public class ListaSimples<Dado extends Comparable<Dado>> implements Serializable
         }
     }
 
-    public boolean EstaVazia()
+    public boolean estaVazia()
     {
         return getPrimeiro() == null;
     }
 
-    public void InserirAntesDoInicio(NoLista<Dado> novoNo)
+    public void inserirAntesDoInicio(NoLista<Dado> novoNo)
     {
-        if (EstaVazia())
+        if (estaVazia())
             ultimo = novoNo;
         novoNo.setProx(primeiro);
         primeiro = novoNo;
         quantosNos++;
     }
 
-    public void InserirAntesDoInicio(Dado informacao)
+    public void inserirAntesDoInicio(Dado informacao)
     {
         if (informacao != null)
         {
             NoLista<Dado> novoNo = new NoLista<Dado>(informacao, null);
-            InserirAntesDoInicio(novoNo);
+            inserirAntesDoInicio(novoNo);
         }
     }
 
-    public void InserirAposFim(NoLista<Dado> novoNo)
+    public void inserirAposFim(NoLista<Dado> novoNo)
     {
-        if (EstaVazia())
+        if (estaVazia())
             primeiro = novoNo;
         else
             ultimo.setProx(novoNo);
@@ -88,20 +88,20 @@ public class ListaSimples<Dado extends Comparable<Dado>> implements Serializable
         quantosNos++;
     }
 
-    public void InserirAposFim(Dado informacao)
+    public void inserirAposFim(Dado informacao)
     {
         if (informacao != null)
         {
             NoLista novoNo = new NoLista<Dado>(informacao, null);
-            InserirAposFim(novoNo);
+            inserirAposFim(novoNo);
         }
     }
 
-    public boolean ExisteDado(Dado outroProcurado)
+    public boolean existeDado(Dado outroProcurado)
     {
         anterior = null;
         atual = primeiro;
-        if (EstaVazia())
+        if (estaVazia())
             return false;
 
         if (outroProcurado.compareTo(primeiro.getInfo()) < 0)
@@ -136,16 +136,16 @@ public class ListaSimples<Dado extends Comparable<Dado>> implements Serializable
         return achou;
     }
 
-    public void InserirEmOrdem(Dado dados)
+    public void inserirEmOrdem(Dado dados)
     {
-        if (!ExisteDado(dados))
+        if (!existeDado(dados))
         {
             NoLista<Dado> novo = new NoLista<Dado>(dados, null);
-            if (EstaVazia())
-                InserirAntesDoInicio(novo);
+            if (estaVazia())
+                inserirAntesDoInicio(novo);
             else
             if (anterior == null && atual != null)
-                InserirAntesDoInicio(novo);
+                inserirAntesDoInicio(novo);
             else
                 InserirNoMeio(novo);
         }
@@ -159,16 +159,16 @@ public class ListaSimples<Dado extends Comparable<Dado>> implements Serializable
         quantosNos++;
     }
 
-    public boolean Remover(Dado dados)
+    public boolean remover(Dado dados)
     {
-        if (!ExisteDado(dados))
+        if (!existeDado(dados))
             return false;
 
-        RemoverNo(anterior, atual);
+        removerNo(anterior, atual);
         return true;
     }
 
-    protected void RemoverNo(NoLista<Dado> anterior, NoLista<Dado> atual)
+    protected void removerNo(NoLista<Dado> anterior, NoLista<Dado> atual)
     {
         if (anterior == null && atual != null)
         {
@@ -185,44 +185,11 @@ public class ListaSimples<Dado extends Comparable<Dado>> implements Serializable
         quantosNos--;
     }
 
-    //os parametros eram REF
-    private void ProcurarMenor(NoLista<Dado> antM, NoLista<Dado> atuM)
-    {
-        antM = anterior = null;
-        atuM = atual = primeiro;
-        while (atual != null)
-        {
-            if (atual.getInfo().compareTo(atuM.getInfo()) < 0 )
-            {
-                antM = anterior;
-                atuM = atual;
-            }
-            anterior = atual;
-            atual = atual.getProx();
-        }
-    }
-
-    public void Ordenar()
-    {
-        NoLista<Dado> menor = null, antMenor = null, noAIncluir = null;
-        ListaSimples listaOrdenada = new ListaSimples<Dado>();
-        while (!this.EstaVazia())
-        {
-            ProcurarMenor(antMenor, menor);
-            noAIncluir = menor;
-            this.RemoverNo(antMenor, menor);
-            listaOrdenada.InserirAposFim(noAIncluir);
-        }
-        this.primeiro = listaOrdenada.primeiro;
-        this.ultimo = listaOrdenada.ultimo;
-        this.quantosNos = listaOrdenada.quantosNos;
-        this.atual = this.anterior = null;
-    }
 
     public Object[] toArray()
     {
         Object[] array = null;
-        if(!this.EstaVazia())
+        if(!this.estaVazia())
         {
             int qtdNos = this.getQuantosNos();
             array = new Object[qtdNos];

@@ -61,3 +61,5 @@ Guadalajara    Zaragoza        257   72
 Barcelona      Mataro           31   31
 Mataro         Girona           80   44
 Girona         Perpignan        93   38
+Alicante       Bilbao           93   38
+Bilbao         Murcia           93   38

@@ -1,5 +1,7 @@
 package br.unicamp.cotuca.pathbetweencities.caminho;
 
+import androidx.annotation.NonNull;
+
 import java.io.Serializable;
 
 import br.unicamp.cotuca.pathbetweencities.interfaces.Copiavel;
@@ -85,5 +87,13 @@ public class Caminho implements Comparable<Caminho>, Copiavel<Caminho>, Serializ
         c.setTempo(this.getTempo());
 
         return c;
+    }
+
+    @NonNull
+    @Override
+    public String toString() {
+        String ret = String.format("%-15s",this.getNomeCidadeOrigem()) +
+                String.format("%-16s",this.getNomeCidadeDestino()) + String.format("%3s", this.getDistancia()) + String.format("%5s", this.getTempo());
+        return ret;
     }
 }

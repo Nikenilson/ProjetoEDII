@@ -3,24 +3,25 @@ package br.unicamp.cotuca.pathbetweencities.hash;
 import java.io.Serializable;
 import java.util.ArrayList;
 import br.unicamp.cotuca.pathbetweencities.cidade.Cidade;
+import br.unicamp.cotuca.pathbetweencities.lista.ListaSimples;
 
 public class BucketHashCidade {
     private final int SIZE = 10007;
-    protected ArrayList<Cidade>[] data;
+    protected ListaSimples<Cidade>[] data;
 
-    public ArrayList<Cidade>[] getData() {
+    public ListaSimples<Cidade>[] getData() {
         return data;
     }
 
-    public void setData(ArrayList<Cidade>[] data) {
+    public void setData(ListaSimples<Cidade>[] data) {
         this.data = data;
     }
 
     public BucketHashCidade()
     {
-        data = new ArrayList[SIZE];
+        data = new ListaSimples[SIZE];
         for (int i = 0; i < SIZE; i++)
-            data[i] = new ArrayList(1);
+            data[i] = new ListaSimples();
     }
 
     public int hash(String s)
@@ -39,15 +40,15 @@ public class BucketHashCidade {
     public void insert(Cidade item)
     {
         int hash_value = hash(item.getNomeCidade());
-        if (!data[hash_value].contains(item))
-            data[hash_value].add(item);
+        if (!data[hash_value].existeDado(item))
+            data[hash_value].inserirAposFim(item);
     }
 
     public Cidade procurarCidade(String s)
     {
         int hval = hash(s);
-        if (data[hval].get(0).getNomeCidade().equals(s))
-            return data[hval].get(0);
+        if (data[hval].getPrimeiro().getInfo().getNomeCidade().equals(s))
+            return data[hval].getPrimeiro().getInfo();
         return null;
     }
 }

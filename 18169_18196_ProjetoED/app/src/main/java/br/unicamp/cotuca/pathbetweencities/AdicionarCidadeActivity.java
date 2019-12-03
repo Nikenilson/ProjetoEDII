@@ -9,8 +9,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+
 import br.unicamp.cotuca.pathbetweencities.cidade.Cidade;
-import br.unicamp.cotuca.pathbetweencities.hash.BucketHashCidade;
 import br.unicamp.cotuca.pathbetweencities.lista.ListaSimples;
 
 public class AdicionarCidadeActivity extends AppCompatActivity {
@@ -33,14 +35,26 @@ public class AdicionarCidadeActivity extends AppCompatActivity {
             public void onClick(View view) {
                 int qtosDados = 0;
                 ListaSimples<Cidade> lista = null;
+                Cidade c = null;
                 if(!edtCoordX.getText().toString().trim().equals("") && !edtCoordY.getText().toString().trim().equals("")){
                     float f1 = Float.parseFloat(edtCoordX.getText().toString());
                     float f2 = Float.parseFloat(edtCoordY.getText().toString());
                     qtosDados = (int) getIntent().getSerializableExtra("qtosDados");
-                    Cidade c = new Cidade(qtosDados, f1 , f2, edtNomeCidade.getText().toString());
+                    c = new Cidade(qtosDados, f1 , f2, edtNomeCidade.getText().toString());
                     lista = (ListaSimples<Cidade>) getIntent().getSerializableExtra("listaCidades");
-                    lista.InserirAposFim(c);
+                    lista.inserirAposFim(c);
                 }
+
+                try{
+                    FileWriter fw = new FileWriter(getFilesDir().getPath() + "/cidades.txt", true);
+                    BufferedWriter osw = new BufferedWriter(fw);
+                    osw.write("\n" + c.toString());
+                    osw.flush();
+                    osw.close();
+                }catch (Exception e){
+                    e.printStackTrace();
+                }
+
                 Intent result = new Intent();
                 result.putExtra("qtosDados",qtosDados);
                 result.putExtra("listaCidades", lista);

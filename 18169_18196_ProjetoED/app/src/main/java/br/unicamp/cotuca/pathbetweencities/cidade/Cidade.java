@@ -1,5 +1,7 @@
 package br.unicamp.cotuca.pathbetweencities.cidade;
 
+import androidx.annotation.NonNull;
+
 import java.io.Serializable;
 
 import br.unicamp.cotuca.pathbetweencities.interfaces.Copiavel;
@@ -73,5 +75,13 @@ public class Cidade implements Comparable<Cidade>, Copiavel<Cidade>, Serializabl
     public Cidade copia() {
         Cidade c = new Cidade(this.getIdCidade(), this.getCoordenadaX(), this.getCoordenadaY(), this.getNomeCidade());
         return c;
+    }
+
+    @NonNull
+    @Override
+    public String toString() {
+        String ret = String.format("%-2s",this.getIdCidade()) +
+                String.format("%-16s",this.getNomeCidade()) + String.format("%5s", this.getCoordenadaX()) + String.format("%6s", this.getCoordenadaY());
+        return ret;
     }
 }

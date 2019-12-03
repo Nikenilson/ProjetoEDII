@@ -11,7 +11,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 
-import java.util.List;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 
 import br.unicamp.cotuca.pathbetweencities.caminho.Caminho;
 import br.unicamp.cotuca.pathbetweencities.cidade.Cidade;
@@ -56,8 +57,17 @@ public class AdicionarCaminhoActivity extends AppCompatActivity {
                                 Integer.parseInt(edtDistancia.getText().toString()), Integer.parseInt(edtTempo.getText().toString()));
 
                         listaCaminhos = (ListaSimples<Caminho>) getIntent().getSerializableExtra("listaCaminhos");
-                        listaCaminhos.InserirAposFim(c);
+                        listaCaminhos.inserirAposFim(c);
 
+                        try{
+                            FileWriter fw = new FileWriter(getFilesDir().getPath() + "/caminhos.txt", true);
+                            BufferedWriter osw = new BufferedWriter(fw);
+                            osw.write("\n" + c.toString());
+                            osw.flush();
+                            osw.close();
+                        }catch (Exception e){
+                            e.printStackTrace();
+                        }
                         Intent intent = new Intent();
                         intent.putExtra("listaCaminhos", listaCaminhos);
                         setResult(Activity.RESULT_OK,intent);
