@@ -394,16 +394,20 @@ public class MainActivity extends AppCompatActivity {
             PilhaLista<Caminho> caminhos = new PilhaLista();
             caminhosDescobertos = new PilhaLista();
 
+			//"Limpa" o vetor de booleans
             for (int i = 0; i < qtasCidades; i++)
                 passouCidade[i] = false;
             do {
                 if (cdOrigem == cdDestino || c >= qtasCidades) {
-                    if (caminhos.estaVazia())
+                    if (caminhos.estaVazia()) //Se a pilha de caminhos esta vazia, ja achou todos
                         achouTodos = true;
                     else {
                         try{
+							//Se esse caminho leva ao destino, empilha ele
                             if (cdOrigem == cdDestino)
                                 caminhosDescobertos.empilhar(caminhos.copia());
+
+                            //Pega o proximo caminho e as duas cidades na Tabela de Hash
                             Caminho caminho = caminhos.desempilhar();
                             Cidade cAuxOrigem = hashCidades.procurarCidade(caminho.getNomeCidadeOrigem());
                             Cidade cAuxDestino = hashCidades.procurarCidade(caminho.getNomeCidadeDestino());
@@ -418,6 +422,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 if (c < qtasCidades && matAdjacencias[cdOrigem][c] != null) {
                     if (passouCidade[c] != true) {
+						//Sinaliza que ja passou na cidade do ultimo caminho e pega o proximo caminho da matriz de adjacencias
                         passouCidade[cdOrigem] = true;
                         caminhos.empilhar(matAdjacencias[cdOrigem][c]);
                         cdOrigem = c;
@@ -426,11 +431,14 @@ public class MainActivity extends AppCompatActivity {
                 }
                 c++;
             }
+            //Repete enquanto nao achou todos
             while (!achouTodos);
+
+            //Exibe todos os caminhos encontrados na tela
             exibirCaminhos(caminhosDescobertos);
         }
         else
-        if (cdOrigem != -1 && cdDestino != -1)
+        if (cdOrigem != -1 && cdDestino != -1) //Se as duas cidades sao validas e caiu nesse else, o usuario selecionou duas cidades iguais
             Toast.makeText(getApplicationContext(), "Você já está na cidade !", Toast.LENGTH_SHORT).show();
 
 
