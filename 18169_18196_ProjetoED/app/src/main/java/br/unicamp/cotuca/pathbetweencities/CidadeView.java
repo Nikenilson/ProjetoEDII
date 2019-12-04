@@ -19,34 +19,42 @@ public class CidadeView extends LinearLayout {
     boolean ePonto, eDijkstra;
     int[] verticesDijkstra;
 
+    //Retorna um vetor com todos os vertices para o algoritmo de Dijkstra
     public int[] getVerticesDijkstra() {
         return verticesDijkstra;
     }
 
+    //Seta os vertices para o algoritmo de Dijkstra, passando um vetor como parametro
     public void setVerticesDijkstra(int[] verticesDijkstra) {
         this.verticesDijkstra = verticesDijkstra;
     }
 
+    //Retorna se eh dijkstra ou nao
     public boolean iseDijkstra() {
         return eDijkstra;
     }
 
+    //Define se eh dijkstra ou nao
     public void seteDijkstra(boolean eDijkstra) {
         this.eDijkstra = eDijkstra;
     }
 
+    //Retorna se eh ponto ou nao
     public boolean isePonto() {
         return ePonto;
     }
 
+    //Define se eh ponto ou nao
     public void setePonto(boolean ePonto) {
         this.ePonto = ePonto;
     }
 
+    //Retorna um vetor com todas as cidades
     public Cidade[] getCidades() {
         return cidades;
     }
 
+    //Seta todas as cidades
     public void setCidades(Cidade[] cidades) {
         this.cidades = cidades;
     }
@@ -72,9 +80,11 @@ public class CidadeView extends LinearLayout {
         setWillNotDraw(false);
     }
 
+    //Desenha a Cidade na view
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
+        //Se eh ponto, desenha um ponto
         if(ePonto){
             Paint paint = new Paint();
             paint.setStyle(Paint.Style.FILL);
@@ -94,6 +104,7 @@ public class CidadeView extends LinearLayout {
                 i++;
             }
         }
+        //Se eh dilkstra
         if(eDijkstra){
             Paint paint = new Paint();
             paint.setAntiAlias(true);

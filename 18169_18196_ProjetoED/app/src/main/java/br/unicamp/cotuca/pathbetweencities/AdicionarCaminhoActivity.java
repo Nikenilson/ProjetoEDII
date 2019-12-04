@@ -29,36 +29,46 @@ public class AdicionarCaminhoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_adicionar_caminho);
 
+        //Linka cada objeto ao seu respectivo controle no xml
         spinnerOrigem = findViewById(R.id.spinnerOrigem);
         spinnerDestino = findViewById(R.id.spinnerDestino);
         edtDistancia = findViewById(R.id.edtDistancia);
         edtTempo = findViewById(R.id.edtTempo);
         btnAdicionar = findViewById(R.id.btnAdicionar);
 
+        //Inicia e popula a lista de cidades
         ListaSimples<Cidade> listaCidades = (ListaSimples<Cidade>) getIntent().getSerializableExtra("listaCidades");
         Object[] objs = listaCidades.toArray();
         String[] arrayNomeCidades = new String[listaCidades.getQuantosNos()];
         for(int i = 0; i < arrayNomeCidades.length; i++)
             arrayNomeCidades[i] = ((Cidade) objs[i]).getNomeCidade();
+
+        //Seta um adapter para o vetor de cidades
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_spinner_item, arrayNomeCidades);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerOrigem.setAdapter(adapter);
         spinnerDestino.setAdapter(adapter);
 
+        //No evento onClick do botao de adicionar caminhos
         btnAdicionar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //Verifica se nenhuma variavel eh invalida
                 ListaSimples<Caminho> listaCaminhos = null;
                 if(spinnerOrigem.getSelectedItem() != spinnerDestino.getSelectedItem()){
                     if(!edtDistancia.getText().toString().trim().equals("") &&
                     !edtTempo.getText().toString().trim().equals("")){
+
+                        //Cria um novo caminho
                         Caminho c = new Caminho(spinnerOrigem.getSelectedItem().toString(), spinnerDestino.getSelectedItem().toString(),
                                 Integer.parseInt(edtDistancia.getText().toString()), Integer.parseInt(edtTempo.getText().toString()));
 
+                        //Insere ele na lista de caminhos que veio com o Intent
                         listaCaminhos = (ListaSimples<Caminho>) getIntent().getSerializableExtra("listaCaminhos");
                         listaCaminhos.inserirAposFim(c);
 
+                        //Salva no arquivo txt
                         try{
                             FileWriter fw = new FileWriter(getFilesDir().getPath() + "/caminhos.txt", true);
                             BufferedWriter osw = new BufferedWriter(fw);
@@ -68,12 +78,14 @@ public class AdicionarCaminhoActivity extends AppCompatActivity {
                         }catch (Exception e){
                             e.printStackTrace();
                         }
+
+                        //Volta para tela principal apos ter adicionado
                         Intent intent = new Intent();
                         intent.putExtra("listaCaminhos", listaCaminhos);
                         setResult(Activity.RESULT_OK,intent);
                         finish();
                     }
-                }//preencha tudo
+                }
             }
         });
     }

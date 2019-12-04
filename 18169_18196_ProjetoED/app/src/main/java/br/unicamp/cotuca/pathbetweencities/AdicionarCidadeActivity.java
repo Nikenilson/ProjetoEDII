@@ -25,26 +25,33 @@ public class AdicionarCidadeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_adicionar_cidade);
 
+        //Linka cada objeto ao seu respectivo controle no xml
         edtNomeCidade = findViewById(R.id.edtNomeCidade);
         edtCoordX = findViewById(R.id.edtCoordX);
         edtCoordY = findViewById(R.id.edtCoordY);
         btnAdicionar = findViewById(R.id.btnAdicionar);
 
+        //No evento onClick do botao de adicionar cidades
         btnAdicionar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 int qtosDados = 0;
                 ListaSimples<Cidade> lista = null;
                 Cidade c = null;
+                //Se todos os campos estiverem corretamente preenchidos
                 if(!edtCoordX.getText().toString().trim().equals("") && !edtCoordY.getText().toString().trim().equals("")){
                     float f1 = Float.parseFloat(edtCoordX.getText().toString());
                     float f2 = Float.parseFloat(edtCoordY.getText().toString());
                     qtosDados = (int) getIntent().getSerializableExtra("qtosDados");
                     c = new Cidade(qtosDados, f1 , f2, edtNomeCidade.getText().toString());
+
+                    //Adiciona a nova cidade na lista de cidades, que veio com o Intent
                     lista = (ListaSimples<Cidade>) getIntent().getSerializableExtra("listaCidades");
                     lista.inserirAposFim(c);
+
                 }
 
+                //Salva no arquivo txt
                 try{
                     FileWriter fw = new FileWriter(getFilesDir().getPath() + "/cidades.txt", true);
                     BufferedWriter osw = new BufferedWriter(fw);
@@ -55,6 +62,7 @@ public class AdicionarCidadeActivity extends AppCompatActivity {
                     e.printStackTrace();
                 }
 
+                //Volta pagina principal apos ter incluido a nova cidade
                 Intent result = new Intent();
                 result.putExtra("qtosDados",qtosDados);
                 result.putExtra("listaCidades", lista);

@@ -60,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //Linka cada objeto ao seu respectivo controle no xml
         canvaImagem = findViewById(R.id.canvaImagem);
         btnBuscar = findViewById(R.id.btnBuscar);
         btnAddCaminho = findViewById(R.id.btnAddCaminho);
@@ -76,6 +77,7 @@ public class MainActivity extends AppCompatActivity {
                 PERMISSION_EXTERNAL_STORAGE);
         listaCidades = new ListaSimples<>();
         try{
+            //Se o arquivo nao existe, cria o arquivo
             File file = new File(getFilesDir().getPath() + "/cidades.txt");
             OutputStreamWriter osw;
             if(!file.exists()){
@@ -139,6 +141,7 @@ public class MainActivity extends AppCompatActivity {
                 osw.close();
             }
             File file2 = new File(getFilesDir().getPath() + "/caminhos.txt");
+            //Se o outro aqrquivo nao existe, cria o outro arquivo
             if(!file2.exists()){
                 FileOutputStream fOut = openFileOutput("caminhos.txt", MODE_PRIVATE);
                 osw = new OutputStreamWriter(fOut);
@@ -217,16 +220,19 @@ public class MainActivity extends AppCompatActivity {
             String receiveString = "";
             while ((receiveString = bufferedReader.readLine()) != null ) {
                 Cidade c = new Cidade(receiveString);
+                //Popula a lista de Cidades e a Tabela de Hash de Cidades
                 listaCidades.inserirAposFim(c);
                 hashCidades.insert(c);
                 qtasCidades++;
             }
+            //Cria o grafo com as cidades
             criarGrafo();
             Object arrayCidadesObject[] = listaCidades.toArray();
             Cidade[] arrayCidades = new Cidade[arrayCidadesObject.length];
             for(int i = 0; i < arrayCidadesObject.length; i++)
                 arrayCidades[i] = (Cidade)arrayCidadesObject[i];
 
+            //Desenha os pontos no mapa
             desenharPontos(arrayCidades);
 
             String arrayNomeCidades[] = new String[arrayCidades.length];
@@ -235,10 +241,13 @@ public class MainActivity extends AppCompatActivity {
             ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
                     android.R.layout.simple_spinner_item, arrayNomeCidades);
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+            //Seta os adaptadores de array de cidade
             spOrigem.setAdapter(adapter);
             spDestino.setAdapter(adapter);
             bufferedReader.close();
         }
+        //Se algo deu errado, avisa o usuario
         catch (FileNotFoundException e) {
             Toast.makeText(getApplicationContext(), "Arquivo não encontrado", Toast.LENGTH_SHORT).show();
 
@@ -246,6 +255,7 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), "Arquivo não pode ser lido", Toast.LENGTH_SHORT).show();
         }
 
+        //No onclick do botao de buscar caminho, busca todos os caminhos usando backtracking e acha o melhor usando dijkstra
         btnBuscar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -254,6 +264,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //No onclick do botao de adicionar cidades, redireciona para outra view onde as cidades podem ser adicionadas
         btnAddCidade.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -264,6 +275,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //No onclick do botao de adicionar caminhos, redireciona para outra view onde os caminhos podem ser adicionados
         btnAddCaminho.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -278,6 +290,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        //Se o codigo for 1 adiciona Cidade
         if (requestCode == 1) {
             if(resultCode == Activity.RESULT_OK){
                 listaCidades = (ListaSimples<Cidade>) data.getSerializableExtra("listaCidades");
@@ -296,6 +309,7 @@ public class MainActivity extends AppCompatActivity {
                 recriarGrafo();
             }
         }
+        //Se for 2, adiciona caminho
         if (requestCode == 2) {
             if(resultCode == Activity.RESULT_OK){
                 listaCaminhos = (ListaSimples<Caminho>) data.getSerializableExtra("listaCaminhos");
@@ -308,6 +322,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    //Recria o grafo, usado quando uma nova cidade eh adicionada
     public void recriarGrafo(){
         matAdjacencias = new Caminho[qtasCidades][qtasCidades];
         for(NoLista<Caminho> atual = listaCaminhos.getPrimeiro(); atual.getProx() != null; atual = atual.getProx()) {
@@ -318,6 +333,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    //Cria o grafo
     public void criarGrafo() {
         matAdjacencias = new Caminho[qtasCidades][qtasCidades];
         try {
@@ -326,6 +342,7 @@ public class MainActivity extends AppCompatActivity {
             String receiveString = "";
 
             listaCaminhos = new ListaSimples<>();
+            //Adiciona as informacoes dos caminhos na matriz de adjacencias
             while ((receiveString = bufferedReader.readLine()) != null ) {
                 Caminho c = new Caminho(receiveString);
                 Cidade cAuxOrigem = hashCidades.procurarCidade(c.getNomeCidadeOrigem());
@@ -344,6 +361,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    //Busca o caminho pelo algoritmo de Dijkstra
     public void buscarCaminhosDijkstra(int cdOrigem, int cdDestino){
 
         grafo = new Grafo(qtasCidades);
@@ -367,6 +385,7 @@ public class MainActivity extends AppCompatActivity {
         edtResultados.setText(grafo.acharCaminho(cdOrigem, cdDestino, edtResultados));
     }
 
+    //Usa backtracking para achar todos os caminhos
     public void buscarCaminhosBackingTrack(int cdOrigem, int cdDestino) {
         if (cdOrigem != cdDestino) {
             boolean achouTodos = false;
@@ -417,17 +436,21 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    //Exibe os caminhos na tela
     public void exibirCaminhos(PilhaLista<PilhaLista<Caminho>> caminhos) {
         PilhaLista<PilhaLista<Caminho>> pilhaCopia = caminhos.copia();
         ListaSimples<Cidade> cidadesPrintar, todosOsCaminhos = new ListaSimples<>();
         Cidade[] cidadesAPrintar = null;
         int tamanhoAtual = 0;
+
+        //Enquanto a pilha de caminhos nao esta vazia, desempilha caminhos e exibe eles
         while(!pilhaCopia.estaVazia()){
             try{
                 PilhaLista<Caminho> pcAtual = pilhaCopia.desempilhar();
 
                 Caminho cAtual = null;
                 cidadesPrintar = new ListaSimples<>();
+                //Vai guardando as cidades a printar em uma lista
                 while (!pcAtual.estaVazia())
                 {
                     cAtual = pcAtual.desempilhar();
@@ -447,10 +470,13 @@ public class MainActivity extends AppCompatActivity {
             Object[] o = todosOsCaminhos.toArray();
             for(int indiceObj = 0; indiceObj < tamanhoAtual; indiceObj++)
                 cidadesAPrintar[indiceObj] = (Cidade)o[indiceObj];
+
+            //printa todas as cidades
             desenharLinhas(cidadesAPrintar);
         }
     }
 
+    //Desenha os pontos que representam as cidades
     public void desenharPontos(Cidade[] cidades) {
         Bitmap bmp = Bitmap.createBitmap(500,500, Bitmap.Config.ARGB_8888);
         Canvas ponto = new Canvas(bmp);
@@ -459,6 +485,7 @@ public class MainActivity extends AppCompatActivity {
         canvaImagem.draw(ponto);
     }
 
+    //Desenha as linhas que representam os caminhos entre as cidades
     public void desenharLinhas(Cidade[] cidades){
         canvaImagem.setePonto(false);
         canvaImagem.setCidades(cidades);
